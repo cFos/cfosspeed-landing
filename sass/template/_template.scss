@@ -1,0 +1,78 @@
+
+/*------------------------------------*\
+		$TEMPLATE
+\*------------------------------------*/
+
+
+/**
+ * Basic template styling. Applied to all pages
+ */
+
+
+
+/**
+ * Custom HTML and body styling
+ */
+
+html { }
+
+body { }
+
+
+
+/**
+ * Main wrapper styling
+ */
+
+.wrapper {
+	position: relative;
+
+	max-width: 1280px;
+
+	padding-left:  $twice-spacing-unit;
+	padding-right: $twice-spacing-unit;
+
+	margin: 0 auto;
+}
+
+
+
+/**
+ * Main container styling
+ */
+
+#content {
+	position: relative;
+
+	overflow: hidden; // to expand #content beyond margins
+}
+
+
+
+/**
+ * Main header styling
+ */
+
+
+
+
+
+/**
+ * Main footer styling
+ */
+
+
+
+
+
+/**
+ * css3 animation effects
+ */
+
+.trans400 {
+	-webkit-transition: all 0.4s ease;
+		 -moz-transition: all 0.4s ease;
+			-ms-transition: all 0.4s ease;
+			 -o-transition: all 0.4s ease;
+					transition: all 0.4s ease;
+}

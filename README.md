@@ -1,4 +1,4 @@
-cfosspeed-landing
-=================
+cFosSpeed landing page
+======================
 
 Landing page for cFosSpeed

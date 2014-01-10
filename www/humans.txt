@@ -1,0 +1,19 @@
+The humans.txt file explains the team, technology, and creative
+assets behind this site.
+
+_______________________________________________________________________________
+
+PEOPLE
+
+	Developer: Serj Lavre (ArmorDarks)
+	Site: #
+	Twitter: https://twitter.com/ArmorDarks
+	Location: Ukraine
+
+_______________________________________________________________________________
+
+TECHNOLOGY
+
+	HTML5
+	CSS3, SASS, SASS Framework (https://github.com/ArmorDarks/sass-framework)
+	jQuery
