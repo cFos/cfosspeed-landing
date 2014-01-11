@@ -1,0 +1,3079 @@
+@charset "UTF-8";
+/*------------------------------------*\
+		$IMPORTS
+\*------------------------------------*/
+/**
+* Options, styles, colors etc.
+*/
+/*------------------------------------*\
+		$VARS
+\*------------------------------------*/
+/**
+ * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
+ * keep, simply redefine here. This means that if inuit.css, for example, sets
+ * your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
+ * that variable in this file. inuit.css ignores its own variables in favour of
+ * using your own, so you can completely modify how inuit.css works without ever
+ * having to alter the framework itself.
+ */
+/*------------------------------------*\
+		$FONT
+\*------------------------------------*/
+/*------------------------------------*\
+		$FONT-SIZES
+\*------------------------------------*/
+/*------------------------------------*\
+		$COLORS
+\*------------------------------------*/
+/**
+ * Base colors
+ */
+/*------------------------------------*\
+		$ASSETS
+\*------------------------------------*/
+/**
+ * Icon-font
+ */
+/*------------------------------------*\
+		$OPTIONS
+\*------------------------------------*/
+/**
+* Elements and abstractions
+*/
+/**
+* Responsive
+*/
+/**
+* Responsive breakpoint's start.
+*/
+/**
+ * Framework
+ */
+/*------------------------------------*\
+		$FRAMEWORK
+\*------------------------------------*/
+/*
+
+		Version: 1.6.2
+
+*/
+/**
+* Default options, styles, colors etc.
+*/
+/*------------------------------------*\
+		$DEFAULTS
+\*------------------------------------*/
+/**
+ * Yeap. That what you've thought about.
+ * Various basic settings.
+ * Override them in your _vars.scss in case
+ * you want to change something
+ */
+/*------------------------------------*\
+		$DEBUG
+\*------------------------------------*/
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+/*------------------------------------*\
+		$BORDER-BOX
+\*------------------------------------*/
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+/*------------------------------------*\
+		$RESPONSIVE
+\*------------------------------------*/
+/**
+ * Responsiveness?
+ */
+/**
+ * Responsiveness for widescreen/high resolution desktop monitors and beyond?
+ * Note: `$responsive` variable above must be set to true before enabling this.
+ */
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+/*------------------------------------*\
+    $ELEMENTS AND ABSTRACTIONS
+\*------------------------------------*/
+/**
+ * Which objects and abstractions would you like to use?
+ */
+/*------------------------------------*\
+		$FONTS
+\*------------------------------------*/
+/**
+ * Base font size
+ */
+/**
+ * Base line-height
+ * Usually proportion is about 1.5 of base font size
+ */
+/**
+ * Base font-family
+ */
+/**
+ * Second font-family
+ */
+/**
+ * Headers font-family and weight
+ */
+/**
+ * Forms font-family and weight
+ */
+/*------------------------------------*\
+		$FONT-SIZES
+\*------------------------------------*/
+/**
+ * Font-sizes (in pixels).
+ * Refer to relevant sections for their implementations.
+ */
+/**
+ * Forms font-size
+ */
+/**
+ * Enable rems
+ */
+/*------------------------------------*\
+		$LINKS
+\*------------------------------------*/
+/**
+ * Make all default links underlined
+ */
+/**
+ * Unline link on hover
+ */
+/**
+ * Apply color change on link hovering
+ */
+/*------------------------------------*\
+		$BUTTONS
+\*------------------------------------*/
+/**
+ * Unline buttons
+ */
+/*------------------------------------*\
+		$ASSETS
+\*------------------------------------*/
+/**
+ * Paths to assets of site - images and fonts
+ */
+/**
+ * Path to sprites file
+ */
+/**
+ * Icon-font
+ */
+/*------------------------------------*\
+		$COLORS
+\*------------------------------------*/
+/**
+ * Base font color
+ */
+/**
+ * Base links color
+ */
+/**
+ * Base headings colors
+ */
+/**
+ * Forms
+ */
+/**
+ * Buttons
+ */
+/**
+ * Background
+ */
+/*------------------------------------*\
+	$FRAMEWORK
+\*------------------------------------*/
+/**
+ * Used for various framework calculations
+ */
+/**
+ * Base styles. Mostly unclassed HTML elements, helpers etc.
+ */
+/*------------------------------------*\
+	$MIXINS
+\*------------------------------------*/
+/**
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+		@include font-size(10px);
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ */
+/**
+ * Style any number of headings in one fell swoop, e.g.:
+ *
+		.foo {
+			@include headings(1, 3){
+			color:#BADA55;
+		}
+	}
+ *
+ * With thanks to @lar_zzz, @paranoida, @rowanmanning and ultimately
+ * @thierrylemoulec for refining and improving my initial mixin.
+ */
+/**
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+		@include vendor(border-radius, 4px);
+ *
+ */
+/**
+ * Create CSS keyframe animations for all vendors in one go, e.g.:
+ *
+		.foo{
+			@include vendor (animation, shrink 3s);
+		}
+
+		@include keyframe (shrink){
+			from{
+				font-size:5em;
+			}
+		}
+ *
+ * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
+ */
+/**
+ * Force overly long spans of text to truncate, e.g.:
+ *
+		@include truncate(100%);
+ *
+ * Where `$truncation-boundary` is a united measurement.
+ */
+/**
+ * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+ *
+ * This mixin creates a CSS arrow on a given element. We can have the arrow
+ * appear in one of 12 locations, thus:
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ *
+ * You pass this position in along with a desired arrow color and optional
+ * border color, for example:
+ *
+ * `@include arrow(top, left, red)`
+ *
+ * for just a single, red arrow, or:
+ *
+ * `@include arrow(bottom, center, red, black)`
+ *
+ * which will create a red triangle with a black border which sits at the bottom
+ * center of the element. Call the mixin thus:
+ *
+		.foo{
+			background-color:#BADA55;
+			border:1px solid #ACE;
+			@include arrow(top, left, #BADA55, #ACE);
+		}
+ *
+ */
+/**
+ * Media query mixin.
+ *
+ * It’s not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming you’ll want a
+ * change at ‘mobile’. However, as inuit.css is required to take a hands off
+ * approach to design decisions, this is the closest we can get to baked-in
+ * responsiveness. It’s flexible enough to allow you to set your own breakpoints
+ * but solid enough to be frameworkified.
+ *
+ * We define some broad breakpoints in our vars file that are picked up here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * palm
+ * lap
+ * lap-and-up
+ * portable
+ * desk
+ * desk-wide
+ *
+ * Not using a media query will, naturally, serve styles to all devices.
+ *
+ * `@include media-query(palm){ [styles here] }`
+ *
+ * We work out your end points for you:
+ */
+/*------------------------------------*\
+		$CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.clear` class appearing over
+ * and over in your markup.
+ */
+.clear:after, .grid:after, .island:after,
+.islet:after, .multi-list:after, .media:after, .nav:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* endif */
+/*------------------*\
+	$HELPERS
+\*------------------*/
+/**
+ * A series of helper classes to use arbitrarily. Only use a helper class if an
+ * element/component doesn’t already have a class to which you could apply this
+ * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
+ * that ruleset as opposed to adding the `.float-left` class to the markup.
+ *
+ * A lot of these classes carry `!important` as you will always want them to win
+ * out over other selectors.
+ */
+/**
+ * Add/remove floats
+ */
+.float--right {
+  float: right !important; }
+
+.float--left {
+  float: left !important; }
+
+.float--flush {
+  float: none !important; }
+
+/**
+ * Alignments
+ */
+.align--left {
+  text-align: left   !important; }
+
+.align--center {
+  text-align: center !important; }
+
+.align--right {
+  text-align: right  !important; }
+
+.align--justify > p {
+  text-align: justify !important; }
+
+.align--top {
+  vertical-align: top   !important; }
+
+.align--middle {
+  vertical-align: middle !important; }
+
+.align--bottom {
+  vertical-align: bottom !important; }
+
+/**
+ * Text styling
+ */
+.text--light {
+  font-weight: 300  !important; }
+
+.text--normal {
+  font-weight: 400  !important; }
+
+.text--semibold {
+  font-weight: 600  !important; }
+
+.text--bold {
+  font-weight: bold !important; }
+
+.text--italic {
+  font-style: italic !important; }
+
+.text--caps {
+  text-transform: uppercase !important; }
+
+.text--nowrap {
+  white-space: nowrap; }
+
+/**
+ * Varius underline/unline stylings
+ */
+.underline {
+  text-decoration: underline; }
+
+/**
+ * Reversed version of underline
+ */
+.underline--rev {
+  text-decoration: none; }
+  .underline--rev:hover {
+    text-decoration: underline; }
+
+.unline {
+  text-decoration: none; }
+
+/**
+ * Removes underline from element, but adds it
+ * to child span
+ *
+ * Useful for anchors with icons inside it
+ */
+.reline {
+  text-decoration: none; }
+  .reline span {
+    text-decoration: underline; }
+  .reline:hover span {
+    text-decoration: none; }
+
+/**
+ * Removes underline, but adds it on hover
+ */
+.reline--rev {
+  text-decoration: none; }
+  .reline--rev span {
+    text-decoration: none; }
+  .reline--rev:hover span {
+    text-decoration: underline; }
+
+/**
+ * Take element out of typography rhythm
+ * Should be applied on custom elements with unusual styling
+ */
+.unrhythm {
+  line-height: 1 !important; }
+
+/**
+ * Inline styling
+ */
+.display--inline {
+  display: inline-block; }
+
+/**
+ * Add/remove margins
+ */
+.margin {
+  margin: 21px !important; }
+
+.margin--center {
+  margin-left: auto !important;
+  margin-right: auto !important; }
+
+.margin--top {
+  margin-top: 21px !important; }
+
+.margin--right {
+  margin-right: 21px !important; }
+
+.margin--bottom {
+  margin-bottom: 21px !important; }
+
+.margin--left {
+  margin-left: 21px !important; }
+
+.margin--ends {
+  margin-top: 21px !important;
+  margin-bottom: 21px !important; }
+
+.margin--sides {
+  margin-right: 21px !important;
+  margin-left: 21px !important; }
+
+.margin--half {
+  margin: 10.5px !important; }
+
+.margin--half--top {
+  margin-top: 10.5px !important; }
+
+.margin--half--right {
+  margin-right: 10.5px !important; }
+
+.margin--half--bottom {
+  margin-bottom: 10.5px !important; }
+
+.margin--half--left {
+  margin-left: 10.5px !important; }
+
+.margin--half--ends {
+  margin-top: 10.5px !important;
+  margin-bottom: 10.5px !important; }
+
+.margin--half--sides {
+  margin-right: 10.5px !important;
+  margin-left: 10.5px !important; }
+
+.margin--twice {
+  margin: 42px !important; }
+
+.margin--twice--top {
+  margin-top: 42px !important; }
+
+.margin--twice--right {
+  margin-right: 42px !important; }
+
+.margin--twice--bottom {
+  margin-bottom: 42px !important; }
+
+.margin--twice--left {
+  margin-left: 42px !important; }
+
+.margin--twice--ends {
+  margin-top: 42px !important;
+  margin-bottom: 42px !important; }
+
+.margin--twice--sides {
+  margin-right: 42px !important;
+  margin-left: 42px !important; }
+
+.margin--flush {
+  margin: 0 !important; }
+
+.margin--flush--top {
+  margin-top: 0 !important; }
+
+.margin--flush--right {
+  margin-right: 0 !important; }
+
+.margin--flush--bottom {
+  margin-bottom: 0 !important; }
+
+.margin--flush--left {
+  margin-left: 0 !important; }
+
+.margin--flush--ends {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.margin--flush--sides {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+/**
+ * Add/remove paddings
+ */
+.padding {
+  padding: 21px !important; }
+
+.padding--top {
+  padding-top: 21px !important; }
+
+.padding--right {
+  padding-right: 21px !important; }
+
+.padding--bottom {
+  padding-bottom: 21px !important; }
+
+.padding--left {
+  padding-left: 21px !important; }
+
+.padding--ends {
+  padding-top: 21px !important;
+  padding-bottom: 21px !important; }
+
+.padding--sides {
+  padding-right: 21px !important;
+  padding-left: 21px !important; }
+
+.padding--half {
+  padding: 10.5px !important; }
+
+.padding--half--top {
+  padding-top: 10.5px !important; }
+
+.padding--half--right {
+  padding-right: 10.5px !important; }
+
+.padding--half--bottom {
+  padding-bottom: 10.5px !important; }
+
+.padding--half--left {
+  padding-left: 10.5px !important; }
+
+.padding--half--ends {
+  padding-top: 10.5px !important;
+  padding-bottom: 10.5px !important; }
+
+.padding--half--sides {
+  padding-right: 10.5px !important;
+  padding-left: 10.5px !important; }
+
+.padding--twice {
+  padding: 42px !important; }
+
+.padding--twice--top {
+  padding-top: 42px !important; }
+
+.padding--twice--right {
+  padding-right: 42px !important; }
+
+.padding--twice--bottom {
+  padding-bottom: 42px !important; }
+
+.padding--twice--left {
+  padding-left: 42px !important; }
+
+.padding--twice--ends {
+  padding-top: 42px !important;
+  padding-bottom: 42px !important; }
+
+.padding--twice--sides {
+  padding-right: 42px !important;
+  padding-left: 42px !important; }
+
+.padding--flush {
+  padding: 0 !important; }
+
+.padding--flush--top {
+  padding-top: 0 !important; }
+
+.padding--flush--right {
+  padding-right: 0 !important; }
+
+.padding--flush--bottom {
+  padding-bottom: 0 !important; }
+
+.padding--flush--left {
+  padding-left: 0 !important; }
+
+.padding--flush--ends {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+.padding--flush--sides {
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
+
+/**
+ * Pull items full width of `.island` parents.
+ */
+.full-bleed {
+  margin-right: -21px !important;
+  margin-left: -21px !important; }
+  .islet .full-bleed {
+    margin-right: -10.5px !important;
+    margin-left: -10.5px !important; }
+
+/**
+ * Add a help cursor to any element that gives the user extra information on
+ * `:hover`.
+ */
+.cursor--help {
+  cursor: help   !important; }
+
+.cursor--arrow {
+  cursor: default !important; }
+
+.cursor--pointer {
+  cursor: pointer !important; }
+
+/**
+ * Mute an object by reducing its opacity.
+ */
+.muted {
+  opacity: 0.5 !important;
+  filter: alpha(opacity=50) !important; }
+
+/**
+ * Add a right-angled quote to links that imply movement, e.g.:
+ *
+		<a href=# class="link--go">Read more</a>
+ *
+ */
+.link--go:after {
+  content: "\00A0" "\00BB" !important; }
+
+/**
+ * Add a left-angled quote to links that imply backwards movement, e.g.:
+ *
+   <a href=# class="link--back">Go back</a>
+ *
+ */
+.link--back:before {
+  content: "\00AB" "\00A0" !important; }
+
+/**
+ * Hide content
+ */
+.display--none {
+  display: none; }
+
+.text--hidden {
+  text-indent: -9999px; }
+
+/**
+ * Display as table
+ *
+ * Apply those classes to container and nested divs
+ * to make them behave like table
+ *
+ * Can be useful when you want two divs to have equal
+ * height
+
+ * Note: don't use floated position on table-cells
+ * 			 'cause they won't behave like table-cells
+ */
+.table {
+  display: table; }
+
+.table__cell {
+  display: table-cell; }
+
+.table__row {
+  display: table-row; }
+
+/**
+ * Apply box-sizing model
+ */
+.border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*------------------------------------*\
+		$MAIN
+\*------------------------------------*/
+html {
+  min-height: 100%;
+  overflow-y: scroll;
+  font: 14px/21px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #313232; }
+
+body {
+  background: #f2f2f2; }
+
+/*------------------------------------*\
+		$NORMALIZE
+\*------------------------------------*/
+/**
+ * Basic normalization
+ */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+header,
+nav,
+main,
+section,
+article,
+footer {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */ }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/*------------------------------------*\
+	$PRINT
+\*------------------------------------*/
+@media print {
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /* Don't show links for images, or javascript/internal links */
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/*------------------------------------*\
+	$RESET
+\*------------------------------------*/
+/**
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+/**
+* Let’s make the box model all nice, shall we...?
+*/
+/**
+ * The usual...
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr, body, input, textarea,
+select, button, a, img {
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Remove most spacing between table cells and border
+ */
+table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset {
+  border: none; }
+
+input,
+textarea,
+select,
+button,
+a,
+img {
+  outline: none; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ * 3. Allow only vertical resizing of textareas
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+  resize: vertical;
+  /* 3 */ }
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title],
+dfn[title] {
+  cursor: help; }
+
+/**
+ * 1. Remove border when inside `a` element in IE 8/9.
+ * 2. So that `alt` text is visually offset if images don’t load.
+ */
+img {
+  border: none;
+  /* [1] */
+  font-style: italic;
+  /* [2] */ }
+
+/**
+ * Give form elements some cursor interactions...
+ */
+button,
+select,
+option {
+  cursor: pointer; }
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none; }
+
+/**
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+img,
+svg,
+audio,
+canvas,
+video {
+  vertical-align: middle; }
+
+/*------------------------------------*\
+	$WIDTHS
+\*------------------------------------*/
+/**
+ * Sizes in human readable format. These are used in conjunction with other
+ * objects and abstractions found in inuit.css, most commonly the grid system
+ * and faux flexbox.
+ *
+ * We have a mixin to generate our widths and their breakpoint-specific
+ * variations.
+ */
+/**
+* Whole
+*/
+.one-whole {
+  width: 100%; }
+
+/**
+* Halves
+*/
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%; }
+
+/**
+* Thirds
+*/
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.333%; }
+
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.666%; }
+
+/**
+* Quarters
+*/
+.one-quarter, .two-eighths, .three-twelfths {
+  width: 25%; }
+
+.three-quarters, .six-eighths, .nine-twelfths {
+  width: 75%; }
+
+/**
+* Fifths
+*/
+.one-fifth, .two-tenths {
+  width: 20%; }
+
+.two-fifths, .four-tenths {
+  width: 40%; }
+
+.three-fifths, .six-tenths {
+  width: 60%; }
+
+.four-fifths, .eight-tenths {
+  width: 80%; }
+
+/**
+* Sixths
+*/
+.one-sixth, .two-twelfths {
+  width: 16.666%; }
+
+.five-sixths, .ten-twelfths {
+  width: 83.333%; }
+
+/**
+* Eighths
+*/
+.one-eighth {
+  width: 12.5%; }
+
+.three-eighths {
+  width: 37.5%; }
+
+.five-eighths {
+  width: 62.5%; }
+
+.seven-eighths {
+  width: 87.5%; }
+
+/**
+* Tenths
+*/
+.one-tenth {
+  width: 10%; }
+
+.three-tenths {
+  width: 30%; }
+
+.seven-tenths {
+  width: 70%; }
+
+.nine-tenths {
+  width: 90%; }
+
+/**
+* Twelfths
+*/
+.one-twelfth {
+  width: 8.333%; }
+
+.five-twelfths {
+  width: 41.666%; }
+
+.seven-twelfths {
+  width: 58.333%; }
+
+.eleven-twelfths {
+  width: 91.666%; }
+
+/**
+ * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
+ * access to these classes. You can define at which breakpoint you’d like an
+ * element to be a certain size, e.g.:
+ *
+ * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ *
+ * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
+ * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
+ * at ‘mobile’ sizes.
+ *
+ * Demo: jsfiddle.net/inuitcss/WS4Ge
+ *
+ */
+@media only screen and (max-width: 480px) {
+  /**
+  * Whole
+  */
+  .palm-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  .palm-one-third, .palm-two-sixths, .palm-four-twelfths {
+    width: 33.333%; }
+
+  .palm-two-thirds, .palm-four-sixths, .palm-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  .palm-one-quarter, .palm-two-eighths, .palm-three-twelfths {
+    width: 25%; }
+
+  .palm-three-quarters, .palm-six-eighths, .palm-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  .palm-one-fifth, .palm-two-tenths {
+    width: 20%; }
+
+  .palm-two-fifths, .palm-four-tenths {
+    width: 40%; }
+
+  .palm-three-fifths, .palm-six-tenths {
+    width: 60%; }
+
+  .palm-four-fifths, .palm-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  .palm-one-sixth, .palm-two-twelfths {
+    width: 16.666%; }
+
+  .palm-five-sixths, .palm-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  .palm-one-eighth {
+    width: 12.5%; }
+
+  .palm-three-eighths {
+    width: 37.5%; }
+
+  .palm-five-eighths {
+    width: 62.5%; }
+
+  .palm-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  .palm-one-tenth {
+    width: 10%; }
+
+  .palm-three-tenths {
+    width: 30%; }
+
+  .palm-seven-tenths {
+    width: 70%; }
+
+  .palm-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  .palm-one-twelfth {
+    width: 8.333%; }
+
+  .palm-five-twelfths {
+    width: 41.666%; }
+
+  .palm-seven-twelfths {
+    width: 58.333%; }
+
+  .palm-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /**
+  * Whole
+  */
+  .lap-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  .lap-one-third, .lap-two-sixths, .lap-four-twelfths {
+    width: 33.333%; }
+
+  .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  .lap-one-quarter, .lap-two-eighths, .lap-three-twelfths {
+    width: 25%; }
+
+  .lap-three-quarters, .lap-six-eighths, .lap-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  .lap-one-fifth, .lap-two-tenths {
+    width: 20%; }
+
+  .lap-two-fifths, .lap-four-tenths {
+    width: 40%; }
+
+  .lap-three-fifths, .lap-six-tenths {
+    width: 60%; }
+
+  .lap-four-fifths, .lap-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  .lap-one-sixth, .lap-two-twelfths {
+    width: 16.666%; }
+
+  .lap-five-sixths, .lap-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  .lap-one-eighth {
+    width: 12.5%; }
+
+  .lap-three-eighths {
+    width: 37.5%; }
+
+  .lap-five-eighths {
+    width: 62.5%; }
+
+  .lap-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  .lap-one-tenth {
+    width: 10%; }
+
+  .lap-three-tenths {
+    width: 30%; }
+
+  .lap-seven-tenths {
+    width: 70%; }
+
+  .lap-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  .lap-one-twelfth {
+    width: 8.333%; }
+
+  .lap-five-twelfths {
+    width: 41.666%; }
+
+  .lap-seven-twelfths {
+    width: 58.333%; }
+
+  .lap-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 481px) {
+  /**
+  * Whole
+  */
+  .lap-and-up-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  .lap-and-up-one-half, .lap-and-up-two-quarters, .lap-and-up-three-sixths, .lap-and-up-four-eighths, .lap-and-up-five-tenths, .lap-and-up-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  .lap-and-up-one-third, .lap-and-up-two-sixths, .lap-and-up-four-twelfths {
+    width: 33.333%; }
+
+  .lap-and-up-two-thirds, .lap-and-up-four-sixths, .lap-and-up-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  .lap-and-up-one-quarter, .lap-and-up-two-eighths, .lap-and-up-three-twelfths {
+    width: 25%; }
+
+  .lap-and-up-three-quarters, .lap-and-up-six-eighths, .lap-and-up-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  .lap-and-up-one-fifth, .lap-and-up-two-tenths {
+    width: 20%; }
+
+  .lap-and-up-two-fifths, .lap-and-up-four-tenths {
+    width: 40%; }
+
+  .lap-and-up-three-fifths, .lap-and-up-six-tenths {
+    width: 60%; }
+
+  .lap-and-up-four-fifths, .lap-and-up-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  .lap-and-up-one-sixth, .lap-and-up-two-twelfths {
+    width: 16.666%; }
+
+  .lap-and-up-five-sixths, .lap-and-up-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  .lap-and-up-one-eighth {
+    width: 12.5%; }
+
+  .lap-and-up-three-eighths {
+    width: 37.5%; }
+
+  .lap-and-up-five-eighths {
+    width: 62.5%; }
+
+  .lap-and-up-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  .lap-and-up-one-tenth {
+    width: 10%; }
+
+  .lap-and-up-three-tenths {
+    width: 30%; }
+
+  .lap-and-up-seven-tenths {
+    width: 70%; }
+
+  .lap-and-up-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  .lap-and-up-one-twelfth {
+    width: 8.333%; }
+
+  .lap-and-up-five-twelfths {
+    width: 41.666%; }
+
+  .lap-and-up-seven-twelfths {
+    width: 58.333%; }
+
+  .lap-and-up-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (max-width: 1023px) {
+  /**
+  * Whole
+  */
+  .portable-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  .portable-one-third, .portable-two-sixths, .portable-four-twelfths {
+    width: 33.333%; }
+
+  .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths {
+    width: 25%; }
+
+  .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  .portable-one-fifth, .portable-two-tenths {
+    width: 20%; }
+
+  .portable-two-fifths, .portable-four-tenths {
+    width: 40%; }
+
+  .portable-three-fifths, .portable-six-tenths {
+    width: 60%; }
+
+  .portable-four-fifths, .portable-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  .portable-one-sixth, .portable-two-twelfths {
+    width: 16.666%; }
+
+  .portable-five-sixths, .portable-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  .portable-one-eighth {
+    width: 12.5%; }
+
+  .portable-three-eighths {
+    width: 37.5%; }
+
+  .portable-five-eighths {
+    width: 62.5%; }
+
+  .portable-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  .portable-one-tenth {
+    width: 10%; }
+
+  .portable-three-tenths {
+    width: 30%; }
+
+  .portable-seven-tenths {
+    width: 70%; }
+
+  .portable-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  .portable-one-twelfth {
+    width: 8.333%; }
+
+  .portable-five-twelfths {
+    width: 41.666%; }
+
+  .portable-seven-twelfths {
+    width: 58.333%; }
+
+  .portable-eleven-twelfths {
+    width: 91.666%; } }
+@media only screen and (min-width: 1024px) {
+  /**
+  * Whole
+  */
+  .desk-one-whole {
+    width: 100%; }
+
+  /**
+  * Halves
+  */
+  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
+    width: 50%; }
+
+  /**
+  * Thirds
+  */
+  .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
+    width: 33.333%; }
+
+  .desk-two-thirds, .desk-four-sixths, .desk-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+  * Quarters
+  */
+  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
+    width: 25%; }
+
+  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
+    width: 75%; }
+
+  /**
+  * Fifths
+  */
+  .desk-one-fifth, .desk-two-tenths {
+    width: 20%; }
+
+  .desk-two-fifths, .desk-four-tenths {
+    width: 40%; }
+
+  .desk-three-fifths, .desk-six-tenths {
+    width: 60%; }
+
+  .desk-four-fifths, .desk-eight-tenths {
+    width: 80%; }
+
+  /**
+  * Sixths
+  */
+  .desk-one-sixth, .desk-two-twelfths {
+    width: 16.666%; }
+
+  .desk-five-sixths, .desk-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+  * Eighths
+  */
+  .desk-one-eighth {
+    width: 12.5%; }
+
+  .desk-three-eighths {
+    width: 37.5%; }
+
+  .desk-five-eighths {
+    width: 62.5%; }
+
+  .desk-seven-eighths {
+    width: 87.5%; }
+
+  /**
+  * Tenths
+  */
+  .desk-one-tenth {
+    width: 10%; }
+
+  .desk-three-tenths {
+    width: 30%; }
+
+  .desk-seven-tenths {
+    width: 70%; }
+
+  .desk-nine-tenths {
+    width: 90%; }
+
+  /**
+  * Twelfths
+  */
+  .desk-one-twelfth {
+    width: 8.333%; }
+
+  .desk-five-twelfths {
+    width: 41.666%; }
+
+  .desk-seven-twelfths {
+    width: 58.333%; }
+
+  .desk-eleven-twelfths {
+    width: 91.666%; } }
+/**
+ * If you have set the additional `$responsive-extra` variable to ‘true’ in
+ * `_vars.scss` then you now have access to the following class available to
+ * accomodate much larger screen resolutions.
+ */
+/* endif */
+/**
+ * Objects and abstractions
+ */
+/*------------------------------------*\
+	$SHARED
+\*------------------------------------*/
+/**
+ * Where `margin-bottom` is concerned, this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+/**
+ * Base elements
+ */
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre,
+.media, .flag,
+.island, .islet {
+  margin-bottom: 21px; }
+  .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet
+  ul, .islet ol, .islet dl, .islet
+  blockquote, .islet p, .islet address, .islet
+  table, .islet
+  fieldset, .islet figure, .islet
+  pre, .islet
+  .media, .islet .flag, .islet
+  .island, .islet .islet {
+    margin-bottom: 10.5px; }
+
+/**
+ * `hr` elements only take up a few pixels, so we need to give them special
+ * treatment regarding vertical rhythm.
+ */
+hr {
+  margin-bottom: 19px; }
+
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once, here.
+ */
+ul, ol, dd {
+  margin-left: 42px; }
+
+/*------------------------------------*\
+		$BREADCRUMB
+\*------------------------------------*/
+/**
+ * Simple breadcrumb styling to apply to (ordered) lists. Extends `.nav`, e.g.:
+ *
+		<ul class="nav breadcrumb">
+			<li class="breadcrumb_root"><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">The Board</a></li>
+			<li class="breadcrumb_current">Directors</li>
+		</ul>
+ *
+ * Demo: jsfiddle.net/inuitcss/rkAY9
+ *
+ */
+.breadcrumb > li + li:before {
+  content: "\00A0" "\2192" "\00A0" "\00A0"; }
+
+/**
+ * Same breadcrumb, but with heading as last item
+ *
+		<ul class="nav breadcrumb--rev">
+			<li class="breadcrumb_root"><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">The Board</a></li>
+		</ul>
+		<h1>Header as last item</h1>
+ *
+ */
+.breadcrumb--rev > li:after {
+  content: "\00A0" "\00A0" "\2192" "\00A0"; }
+
+/**
+* Denote the root of the tree and current state styling
+*/
+.breadcrumb__root {
+  font-weight: bold; }
+
+/*------------------------------------*\
+	$BUTTONS
+\*------------------------------------*/
+/**
+ * Basic buttons styling.
+ *
+ * Mainly based on Beautons by Harry Roberts (csswizardry.com/beautons)
+ */
+/*------------------------------------*\
+	$BASE
+\*------------------------------------*/
+/**
+ * Base button styles.
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ */
+.btn {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  cursor: pointer;
+  /* [5] */
+  border: none;
+  /* [6] */
+  margin: 0;
+  /* [6] */
+  padding-top: 0;
+  /* [6] */
+  padding-bottom: 0;
+  /* [6] */
+  line-height: 3;
+  /* [7] */
+  padding-right: 1em;
+  /* [7] */
+  padding-left: 1em;
+  /* [7] */
+  color: #fee0cd;
+  background-color: black; }
+  .btn, .btn:hover {
+    text-decoration: none;
+    /* [9] */ }
+
+/**
+ * Make the button inherit sizing from its parent.
+ */
+.btn--natural {
+  vertical-align: baseline;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding-right: .5em;
+  padding-left: .5em; }
+
+/*------------------------------------*\
+	$SIZES
+\*------------------------------------*/
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+.btn--small {
+  line-height: 2;
+  padding-right: .8em;
+  padding-left: .8em; }
+
+.btn--med {
+  line-height: 3;
+  padding-right: 1em;
+  padding-left: 1em; }
+
+.btn--large {
+  line-height: 4;
+  padding-right: 1.5em;
+  padding-left: 1.5em; }
+
+.btn--huge {
+  line-height: 5;
+  padding-right: 2em;
+  padding-left: 2em; }
+
+/**
+ * Wide version of button with unspecified line-height
+ */
+.btn--wide {
+  padding-right: 2em;
+  padding-left: 2em; }
+
+.btn--wider {
+  padding-right: 4em;
+  padding-left: 4em; }
+
+/**
+ * These buttons will fill the entirety of their container.
+ *
+ * 1. Remove padding so that widths and paddings don’t conflict.
+ */
+.btn--full {
+  width: 100%;
+  text-align: center;
+  padding-right: 0;
+  /* [1] */
+  padding-left: 0;
+  /* [1] */ }
+
+/*------------------------------------*\
+	$FONT-SIZES
+\*------------------------------------*/
+/**
+ * Button font-size modifiers.
+ */
+.btn--text--small {
+  font-size: 11.2px; }
+
+.btn--text--normal {
+  font-size: 14px; }
+
+.btn--text--med {
+  font-size: 21px; }
+
+.btn--text--large {
+  font-size: 28px; }
+
+.btn--text--huge {
+  font-size: 42px; }
+
+/*------------------------------------*\
+	$FUNCTIONS
+\*------------------------------------*/
+/**
+ * Positive actions; e.g. sign in, purchase, submit, etc.
+ */
+.btn--positive {
+  background-color: #1fa205;
+  color: #7ef76a; }
+
+/**
+ * Negative actions; e.g. close account, delete photo, remove friend, etc.
+ */
+.btn--negative {
+  background-color: #a20b05;
+  color: #ff8877; }
+
+/**
+ * Inactive, disabled buttons.
+ *
+ * 1. Make the button look like normal cursor when hovered.
+ */
+.btn--disabled,
+.btn--disabled:hover,
+.btn--disabled:active,
+.btn--disabled:focus {
+  background-color: lightgrey;
+  color: #464646;
+  cursor: default;
+  /* [1] */ }
+
+/*------------------------------------*\
+		$FLAG
+\*------------------------------------*/
+/**
+* Place any image- and text-like content side-by-side, arranged vertically,
+* horizontally or by baseline
+* E.g.:
+*
+		<div class="flag">
+			<div class="flag__img">
+				<img src="" alt="">
+			</div>
+			<div class="content">
+				<p></p>
+			</div>
+		</div>
+ *
+ */
+.flag {
+  display: table;
+  width: 100%; }
+
+.flag--top .flag__img,
+.flag--top .flag__content {
+  vertical-align: top; }
+
+.flag--bottom .flag__img,
+.flag--bottom .flag__content {
+  vertical-align: bottom; }
+
+.flag--right .flag__img {
+  padding-right: 0;
+  padding-left: 21px; }
+
+.flag__img,
+.flag__content {
+  display: table-cell;
+  vertical-align: middle; }
+
+.flag__img {
+  padding-right: 21px; }
+  .flag__img > img {
+    display: block;
+    max-width: none; }
+
+.flag__content {
+  width: 100%; }
+
+.flag__content,
+.flag__content > :last-child {
+  margin-bottom: 0; }
+
+/*------------------------------------*\
+		$FORMS
+\*------------------------------------*/
+::-webkit-input-placeholder {
+  color: darkgrey;
+  font: italic 14px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+
+:-moz-placeholder {
+  color: darkgrey;
+  font: italic 14px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+
+::-moz-placeholder {
+  color: darkgrey;
+  font: italic 14px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+
+:-ms-input-placeholder {
+  color: darkgrey;
+  font: italic 14px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+
+fieldset + fieldset {
+  margin-top: 42px; }
+
+.text-input,
+input,
+textarea,
+fieldset {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.text-input,
+input,
+textarea,
+label {
+  background-color: white;
+  color: #8b8b8b;
+  font: 14px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+
+/**
+ * Group sets of form fields in a list, e.g.:
+ *
+		<ul class="form-fields">
+				<li>
+						<label />
+						<input />
+				</li>
+				<li>
+						<label />
+						<select />
+				</li>
+				<li>
+						<label />
+						<input />
+				</li>
+		</ul>
+ *
+ */
+.form-fields {
+  list-style: none;
+  margin: 0; }
+  .form-fields > li + li {
+    margin-top: 21px; }
+
+/**
+ * Extra help text displayed after a field when that field is in focus, e.g.:
+ *
+		<label for=email>Email:</label>
+		<input type=email class=text-input id=email>
+		<small class=extra-help>.edu emails only</small>
+ *
+ * We leave the help text in the document flow and merely set it to
+ * `visibility:hidden;`. This means that it won’t interfere with anything once
+ * it reappears.
+ *
+ */
+/*small*/
+.extra-help {
+  display: inline-block;
+  visibility: hidden; }
+  .text-input:active + .extra-help, .text-input:focus + .extra-help {
+    visibility: visible; }
+
+/*------------------------------------*\
+	$GRIDS
+\*------------------------------------*/
+/**
+ * Fluid and nestable grid system, e.g.:
+ *
+		<div class="grid">
+
+			<div class="grid__item  one-third">
+				<p>One third grid</p>
+			</div>
+			<div class="grid__item  two-thirds">
+				<p>Two thirds grid</p>
+			</div>
+			<div class="grid__item  one-half">
+				<p>One half grid</p>
+			</div>
+			<div class="grid__item  one-quarter">
+				<p>One quarter grid</p>
+			</div>
+			<div class="grid__item  one-quarter">
+				<p>One quarter grid</p>
+			</div>
+
+		</div>
+ *
+ * Demo: jsfiddle.net/inuitcss/CLYUC
+ *
+ */
+/**
+ * Grid wrapper
+ */
+.grid {
+  margin-left: -21px;
+  list-style: none;
+  margin-bottom: 0; }
+
+.grid__item {
+  display: inline-block;
+  padding-left: 21px;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.grid--half {
+  margin-left: -10.5px; }
+  .grid--half > .grid__item {
+    padding-left: 10.5px; }
+
+.grid--wide {
+  margin-left: -42px; }
+  .grid--wide > .grid__item {
+    padding-left: 42px; }
+
+.grid--wider {
+  margin-left: -63px; }
+  .grid--wider > .grid__item {
+    padding-left: 63px; }
+
+.grid--full {
+  margin-left: 0; }
+  .grid--full > .grid__item {
+    padding-left: 0; }
+
+.grid--center {
+  text-align: center; }
+  .grid--center > .grid__item {
+    text-align: left; }
+
+/**
+ * Very infrequently occuring grid wrappers as children of grid wrappers.
+ */
+.grid > .grid {
+  margin-left: 0; }
+
+/**
+ * Grid's inline-blocks whitespace fix
+ */
+.grid {
+  letter-spacing: -0.31em; }
+
+/* Opera hack */
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em; }
+
+.grid__item {
+  letter-spacing: normal;
+  word-spacing: normal; }
+
+/* Used to fix strange behavior in Firefox on inline-grids */
+.grid--nofix {
+  letter-spacing: normal; }
+
+/*------------------------------------*\
+	$HEADINGS
+\*------------------------------------*/
+/**
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=h3` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+h1, .h1 {
+  font-size: 36px;
+  line-height: 1.16667;
+  font-weight: normal; }
+
+h2, .h2 {
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: normal; }
+
+h3, .h3 {
+  font-size: 24px;
+  line-height: 1.75;
+  font-weight: normal; }
+
+h4, .h4 {
+  font-size: 21px;
+  line-height: 1;
+  font-weight: normal; }
+
+h5, .h5 {
+  font-size: 18px;
+  line-height: 1.16667;
+  font-weight: normal; }
+
+h6, .h6 {
+  font-size: 16px;
+  line-height: 1.3125;
+  font-weight: normal; }
+
+/**
+ * A series of classes for setting massive type; for use in heroes, mastheads,
+ * promos, etc.
+ */
+.h-giga {
+  font-size: 96px;
+  line-height: 1.09375; }
+
+.h-mega {
+  font-size: 72px;
+  line-height: 1.16667; }
+
+.h-kilo {
+  font-family: "Philosopher", "PT Sans", Arial, Helvetica, sans-serif;
+  font-size: 44px;
+  line-height: 1.43182; }
+
+/*------------------------------------*\
+		$ICONS and $SPRITES
+\*------------------------------------*/
+/**
+ * Giving an element a class of `.sprite` will throw it into ‘sprite’ mode and apply
+ * a background image e.g.:
+ *
+	 <a class="sprite  sprite--question-mark">More info&hellip;</a>
+ *
+ * or
+ *
+	 <a href=#><i class="sprite  sprite--question-mark"></i> Help and FAQ</a>
+ *
+ * Requires extension in stylesheet.
+ */
+/**
+ * Giving an element a class of `.icon` will throw it into ‘icon’ mode and will
+ * not add a background, but should be used for icon fonts, e.g.:
+ *
+	 <a href=#><i class="icon icon--star"></i> View your favourites</a>
+ *
+ * Requires extension in stylesheet.
+ */
+.sprite,
+.icon {
+  position: relative;
+  display: inline-block;
+  /* reset line-height */
+  line-height: 1;
+  vertical-align: middle;
+  /* So icons added using `.icon` sit in the centre of the element */
+  text-align: center;
+  /* So using `.icon` on certain elements doesn't make a visual difference */
+  font-style: normal;
+  font-weight: normal; }
+
+/**
+ * Apply background to sprites by default
+ */
+.sprite {
+  background: url("../../assets/images/sprites.png") no-repeat; }
+
+/**
+ * Declaration of default icon-font
+ */
+@font-face {
+  font-family: "fontello";
+  src: url("../../assets/fonts/fontello.eot?72944731");
+  src: url("../../assets/fonts/fontello.eot?72944731#iefix") format("embedded-opentype"), url("../../assets/fonts/fontello.woff?72944731") format("woff"), url("../../assets/fonts/fontello.ttf?72944731") format("truetype"), url("../../assets/fonts/fontello.svg?72944731#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.icon {
+  font-family: "fontello"; }
+
+/**
+ * Apply to change size of the icon
+ */
+.icon--75x {
+  font-size: .75em; }
+
+.icon--15x {
+  font-size: 1.5em; }
+
+.icon--2x {
+  font-size: 2em; }
+
+.icon--3x {
+  font-size: 3em; }
+
+.icon--4x {
+  font-size: 4em; }
+
+.icon--5x {
+  font-size: 5em; }
+
+/**
+ * Make width equal to height of icon
+ * Useful for lists and menus
+ */
+.icon--fixed {
+  width: 1em; }
+
+/**
+ * Apply on icon or sprite if simple margin with space isn't enough
+ * or where space is unusable
+ */
+.icon--left,
+.sprite--left {
+  margin-right: .36em; }
+
+.icon--right,
+.sprite--right {
+  margin-left: .36em; }
+
+/*------------------------------------*\
+	$IMAGES
+\*------------------------------------*/
+/**
+ * Fluid images.
+ */
+img {
+  max-width: 100%; }
+
+/**
+ * Non-fluid images if you specify `width` and/or `height` attributes.
+ */
+img[width],
+img[height] {
+  max-width: none; }
+
+/**
+ * Image placement variations.
+ */
+.img--right {
+  float: right;
+  margin-bottom: 10.5px;
+  margin-left: 21px; }
+
+.img--left {
+  float: left;
+  margin-right: 21px;
+  margin-bottom: 10.5px; }
+
+.img--center {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 10.5px;
+  margin-left: auto; }
+
+/*------------------------------------*\
+		$ISLAND
+\*------------------------------------*/
+/**
+ * Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object
+ * E.g.:
+ *
+		<div class=island>
+				I am boxed off.
+		</div>
+ *
+ * Demo: jsfiddle.net/inuitcss/u8pV3
+ *
+ */
+.island,
+.islet {
+  display: block; }
+  .island > :last-child,
+  .island > :last-child,
+  .islet > :last-child,
+  .islet > :last-child {
+    margin-bottom: 0; }
+
+.island {
+  padding: 21px; }
+
+/**
+ * Just like `.island`, only smaller.
+ */
+.islet {
+  padding: 10.5px; }
+
+/*------------------------------------*\
+		$LINKS
+\*------------------------------------*/
+/**
+ * Default link styling
+ */
+a,
+.base-link,
+[data-tooltip] {
+  color: #35adda;
+  text-decoration: underline; }
+  a:hover,
+  .base-link:hover,
+  [data-tooltip]:hover {
+    color: #8db4e2;
+    text-decoration: none; }
+
+/**
+ * Makes link looks like ordinary text
+ * Add .cursor-arrow to remove "pointer" cursor
+ * and make it completely like ordinary text
+ */
+.unlink {
+  text-decoration: none;
+  color: #313232; }
+  .unlink:hover {
+    text-decoration: none;
+    color: #313232; }
+
+/*------------------------------------*\
+		$LISTS
+\*------------------------------------*/
+/**
+ * Create big blocky lists of content, e.g.:
+ *
+		<ul class="block-list">
+			<li>Foo</li>
+			<li>Bar</li>
+			<li>Baz</li>
+			<li><a href="#" class="block-list__link">Foo Bar Baz</a></li>
+		</ul>
+ *
+ * Extend this object in your theme stylesheet.
+ *
+ * Demo: jsfiddle.net/inuitcss/hR57q
+ *
+ */
+/*ul*/
+.block-list {
+  list-style: none;
+  margin-left: 0; }
+  .block-list > li {
+    padding: 10.5px; }
+  .block-list > li > a {
+    display: block;
+    padding: 10.5px;
+    margin: -10.5px; }
+
+/**
+ * The `.multi-list` object is a lot like the `.matrix` object only without the
+ * blocky borders and padding.
+ *
+		<ul class="multi-list  four-cols">
+				<li>Lorem</li>
+				<li>Ipsum</li>
+				<li>Dolor</li>
+				<li>Sit</li>
+		</ul>
+ *
+ * Demo: jsfiddle.net/inuitcss/Y2zrU
+ *
+ */
+/*ul*/
+.multi-list {
+  list-style: none;
+  margin-left: 0; }
+  .multi-list > li {
+    float: left; }
+
+/**
+ * Apply these classes alongside the `.matrix` or `.multi-list` classes on
+ * lists to determine how wide their columns are.
+ */
+/*ul*/
+.two-cols > li {
+  width: 50%; }
+
+/*ul*/
+.three-cols > li {
+  width: 33.333%; }
+
+/*ul*/
+.four-cols > li {
+  width: 25%; }
+
+/*ul*/
+.five-cols > li {
+  width: 20%; }
+
+/**
+ * Unfortunately we have to qualify this selector in order to bring its
+ * specificity above the `.[number]-cols > li` selectors above.
+ */
+/*ul*/
+.multi-list > .all-cols {
+  width: 100%; }
+
+/**
+ * Applies standard margin between ul's elements
+ */
+/*ul*/
+.list--margin > li + li {
+  margin-top: 21px; }
+
+/**
+ * Applies half margin between ul's elements
+ */
+/*ul*/
+.list--margin--half > li + li {
+  margin-top: 10.5px; }
+
+/**
+ * Applies twice margin between ul's elements
+ */
+/*ul*/
+.list--margin--twice > li + li {
+  margin-top: 42px; }
+
+/**
+ * Ordered list defaults margins
+ */
+ol {
+  margin-left: 42px; }
+  ol li + li {
+    margin-top: 10.5px; }
+
+/**
+ * Iconic list
+ *
+ * List with sprites or icons instead of bulletins.
+ * Should be used in conjuration with icons or sprites:
+ *
+		<ul class="list--iconic">
+			<li>
+				<i class="icon icon--ok"></i>
+				Item1
+			</li>
+			<li>
+				<i class="sprite sprite--ok"></i>
+				Item2
+			</li>
+		</ul>
+ *
+ *	Note: iconic list relays on `:first-child` selector, so it's important
+ *       to keep bulletin-icons right after `<li>` tag.
+ *
+ *	1. Pusing list twice left to align it with default list
+ *	   with default bulletings
+ *	2. We have to ensure that it targets only first icons and not all
+ *	   icons in list
+ * 	3. Used to algin icons properly and center it according to the first
+ *	   line of list
+ */
+/*ul*/
+.list--iconic {
+  margin-left: 42px; }
+  .list--iconic li {
+    position: relative; }
+    .list--iconic li > .icon:first-child,
+    .list--iconic li > .sprite:first-child {
+      position: absolute;
+      left: -20px;
+      top: .4em; }
+
+/*------------------------------------*\
+		$MEDIA
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+		<div class="media">
+			<img src=http://placekitten.com/200/300 alt="" class="img">
+			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</div>
+ *
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ *
+ */
+.media {
+  display: block; }
+
+.media--right .media__img {
+  float: right;
+  margin-left: 21px; }
+
+.media__img {
+  float: left;
+  display: block;
+  margin-right: 21px; }
+
+.media__content {
+  overflow: hidden; }
+
+.media__content,
+.media__content > :last-child {
+  margin-bottom: 0; }
+
+/*------------------------------------*\
+		$NAV
+\*------------------------------------*/
+/**
+ * Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+ * When used on an `ol` or `ul`, this class throws the list into horizontal mode
+ * e.g.:
+ *
+		<ul class=nav>
+			<li><a href=#>Home</a></li>
+			<li><a href=#>About</a></li>
+			<li><a href=#>Portfolio</a></li>
+			<li><a href=#>Contact</a></li>
+		</ul>
+ *
+ * Demo: jsfiddle.net/inuitcss/Vnph4
+ *
+ */
+.nav {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0; }
+  .nav > li,
+  .nav > li > a {
+    display: inline-block;
+    *display: inline;
+    zoom: 1; }
+
+/**
+ * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
+ *
+		<ul class="nav  nav--stacked">
+			<li><a href=#>Home</a></li>
+			<li><a href=#>About</a></li>
+			<li><a href=#>Portfolio</a></li>
+			<li><a href=#>Contact</a></li>
+		</ul>
+ *
+ */
+.nav--stacked > li {
+  display: list-item; }
+
+/**
+ * `.nav--blocky` extends `.nav` and throws all links inside in block mode
+ */
+.nav--blocky > a {
+  display: block; }
+
+/**
+ * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
+ *
+		<ul class="nav  block">
+			<li><a href=#>Home</a></li>
+			<li><a href=#>About</a></li>
+			<li><a href=#>Portfolio</a></li>
+			<li><a href=#>Contact</a></li>
+		</ul>
+ *
+ */
+.nav--block {
+  line-height: 1;
+  /**
+   * Remove whitespace caused by `inline-block`.
+   */
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em; }
+  .nav--block > li {
+    letter-spacing: normal;
+    word-spacing: normal; }
+    .nav--block > li > a {
+      padding: 10.5px; }
+
+/**
+ * Force a nav to occupy 100% of the available width of its parent. Extends
+ * `.nav`, e.g.:
+ *
+		<ul class="nav--fit">
+			<li><a href=#>Home</a></li>
+			<li><a href=#>About</a></li>
+			<li><a href=#>Portfolio</a></li>
+			<li><a href=#>Contact</a></li>
+		</ul>
+ *
+ * Thanks to @pimpl for this idea!
+ */
+.nav--fit {
+  display: table;
+  width: 100%; }
+  .nav--fit > li {
+    display: table-cell; }
+    .nav--fit > li > a {
+      display: block; }
+
+/**
+ * Make a list of keywords. Extends `.nav`, e.g.:
+ *
+		<ul class="nav  keywords>
+ *
+ */
+.nav--keywords > li:after {
+  content: "\002C" "\00A0"; }
+.nav--keywords > li:last-child:after {
+  display: none; }
+
+/*------------------------------------*\
+	$TABLES
+\*------------------------------------*/
+table {
+  width: 100%; }
+
+/**
+ * Apply paddings for all th and td
+ */
+.table--padding th,
+.table--padding td {
+  padding: 5.25px;
+  text-align: left; }
+  @media screen and (min-width: 480px) {
+    .table--padding th,
+    .table--padding td {
+      padding: 10.5px; } }
+
+/**
+ * Cell alignments
+ */
+[colspan] {
+  text-align: center; }
+
+[colspan="1"] {
+  text-align: left; }
+
+[rowspan] {
+  vertical-align: middle; }
+
+[rowspan="1"] {
+  vertical-align: top; }
+
+/**
+ * In the HTML above we see several `col` elements with classes whose numbers
+ * represent a percentage width for that column. We leave one column free of a
+ * class so that column can soak up the effects of any accidental breakage in
+ * the table.
+ */
+.t5 {
+  width: 5%; }
+
+.t10 {
+  width: 10%; }
+
+.t12 {
+  width: 12.5%; }
+
+/* 1/8 */
+.t15 {
+  width: 15%; }
+
+.t20 {
+  width: 20%; }
+
+.t25 {
+  width: 25%; }
+
+/* 1/4 */
+.t30 {
+  width: 30%; }
+
+.t33 {
+  width: 33.333%; }
+
+/* 1/3 */
+.t35 {
+  width: 35%; }
+
+.t37 {
+  width: 37.5%; }
+
+/* 3/8 */
+.t40 {
+  width: 40%; }
+
+.t45 {
+  width: 45%; }
+
+.t50 {
+  width: 50%; }
+
+/* 1/2 */
+.t55 {
+  width: 55%; }
+
+.t60 {
+  width: 60%; }
+
+.t62 {
+  width: 62.5%; }
+
+/* 5/8 */
+.t65 {
+  width: 65%; }
+
+.t66 {
+  width: 66.666%; }
+
+/* 2/3 */
+.t70 {
+  width: 70%; }
+
+.t75 {
+  width: 75%; }
+
+/* 3/4*/
+.t80 {
+  width: 80%; }
+
+.t85 {
+  width: 85%; }
+
+.t87 {
+  width: 87.5%; }
+
+/* 7/8 */
+.t90 {
+  width: 90%; }
+
+.t95 {
+  width: 95%; }
+
+/*------------------------------------*\
+		$TEXTS
+\*------------------------------------*/
+/**
+ * A series of classes for setting varius text sizes
+ */
+.text--milli {
+  font-size: 12px;
+  line-height: 1.75; }
+
+.text--micro {
+  font-size: 10px;
+  line-height: 2.1; }
+
+/*------------------------------------*\
+		$TOOLTIPS
+\*------------------------------------*/
+/**
+ * Pure css tooltips
+ * Apply anywhere following code to use:
+ *
+		<span class="tooltip--top"
+					data-tooltip="Appearing text">
+			Text
+		</span>
+ *
+ */
+[data-tooltip] {
+  position: relative;
+  cursor: help;
+  /* tooltip arrow */
+  /* tooltip body */ }
+  [data-tooltip]:before, [data-tooltip]:after {
+    position: absolute;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000000;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    transition: 0.3s ease; }
+  [data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after {
+    visibility: visible;
+    opacity: 1; }
+  [data-tooltip]:before {
+    content: '';
+    position: absolute;
+    background: transparent;
+    border: 6px solid transparent;
+    z-index: 1000001; }
+  [data-tooltip]:after {
+    content: attr(data-tooltip);
+    background: rgba(1, 13, 14, 0.68);
+    color: white;
+    padding: .7em;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-weight: normal;
+    text-transform: none; }
+
+.tooltip--sharp:after {
+  border-radius: 0; }
+
+.tooltip--always:after, .tooltip--always:before {
+  opacity: 1;
+  visibility: visible; }
+.tooltip--always.tooltip--top:after, .tooltip--always.tooltip--top:before {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+  transform: translateY(-8px); }
+.tooltip--always.tooltip--bottom:after, .tooltip--always.tooltip--bottom:before {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+  -o-transform: translateY(8px);
+  transform: translateY(8px); }
+.tooltip--always.tooltip--left:after, .tooltip--always.tooltip--left:before {
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  -ms-transform: translateX(-8px);
+  -o-transform: translateX(-8px);
+  transform: translateX(-8px); }
+.tooltip--always.tooltip--right:after, .tooltip--always.tooltip--right:before {
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  -ms-transform: translateX(8px);
+  -o-transform: translateX(8px);
+  transform: translateX(8px); }
+
+/**
+ * set default color for tooltip arrows
+ */
+.tooltip--top:before {
+  border-top-color: rgba(1, 13, 14, 0.68); }
+
+.tooltip--bottom:before {
+  border-bottom-color: rgba(1, 13, 14, 0.68); }
+
+.tooltip--left:before {
+  border-left-color: rgba(1, 13, 14, 0.68); }
+
+.tooltip--right:before {
+  border-right-color: rgba(1, 13, 14, 0.68); }
+
+.tooltip--error.tooltip--top:before {
+  border-top-color: #b34e4d; }
+.tooltip--error.tooltip--bottom:before {
+  border-bottom-color: #b34e4d; }
+.tooltip--error.tooltip--left:before {
+  border-left-color: #b34e4d; }
+.tooltip--error.tooltip--right:before {
+  border-right-color: #b34e4d; }
+.tooltip--error:after {
+  background-color: #b34e4d; }
+
+.tooltip--info.tooltip--top:before {
+  border-top-color: #3986ac; }
+.tooltip--info.tooltip--bottom:before {
+  border-bottom-color: #3986ac; }
+.tooltip--info.tooltip--left:before {
+  border-left-color: #3986ac; }
+.tooltip--info.tooltip--right:before {
+  border-right-color: #3986ac; }
+.tooltip--info:after {
+  background-color: #3986ac; }
+
+.tooltip--success.tooltip--top:before {
+  border-top-color: #458746; }
+.tooltip--success.tooltip--bottom:before {
+  border-bottom-color: #458746; }
+.tooltip--success.tooltip--left:before {
+  border-left-color: #458746; }
+.tooltip--success.tooltip--right:before {
+  border-right-color: #458746; }
+.tooltip--success:after {
+  background-color: #458746; }
+
+/**
+ * Defines the positoning logic for the tooltips.
+ *
+ * Classes added:
+ *		1) tooltip--top
+ *		2) tooltip--bottom
+ *		3) tooltip--left
+ *		4) tooltip--right
+ */
+/**
+ * top tooltip
+ */
+.tooltip--top:before {
+  margin-bottom: -12px; }
+.tooltip--top:after {
+  margin-left: -18px; }
+.tooltip--top:before, .tooltip--top:after {
+  bottom: 100%;
+  left: 50%; }
+.tooltip--top:hover:before, .tooltip--top:hover:after, .tooltip--top:focus:before, .tooltip--top:focus:after {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+  transform: translateY(-8px); }
+
+/**
+ * bottom tooltip
+ */
+.tooltip--bottom:before {
+  margin-top: -12px; }
+.tooltip--bottom:after {
+  margin-left: -18px; }
+.tooltip--bottom:before, .tooltip--bottom:after {
+  top: 100%;
+  left: 50%; }
+.tooltip--bottom:hover:before, .tooltip--bottom:hover:after, .tooltip--bottom:focus:before, .tooltip--bottom:focus:after {
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+  -o-transform: translateY(8px);
+  transform: translateY(8px); }
+
+/**
+ * right tooltip
+ */
+.tooltip--right:before {
+  margin-left: -12px;
+  margin-bottom: -6px; }
+.tooltip--right:after {
+  margin-bottom: -14px; }
+.tooltip--right:before, .tooltip--right:after {
+  left: 100%;
+  bottom: 50%; }
+.tooltip--right:hover:before, .tooltip--right:hover:after, .tooltip--right:focus:before, .tooltip--right:focus:after {
+  -webkit-transform: translateX(8px);
+  -moz-transform: translateX(8px);
+  -ms-transform: translateX(8px);
+  -o-transform: translateX(8px);
+  transform: translateX(8px); }
+
+/**
+ * left tooltip
+ */
+.tooltip--left:before {
+  margin-right: -12px;
+  margin-bottom: -6px; }
+.tooltip--left:after {
+  margin-bottom: -14px; }
+.tooltip--left:before, .tooltip--left:after {
+  right: 100%;
+  bottom: 50%; }
+.tooltip--left:hover:before, .tooltip--left:hover:after, .tooltip--left:focus:before, .tooltip--left:focus:after {
+  -webkit-transform: translateX(-8px);
+  -moz-transform: translateX(-8px);
+  -ms-transform: translateX(-8px);
+  -o-transform: translateX(-8px);
+  transform: translateX(-8px); }
+
+/**
+ * Sites custom UI
+ */
+/*------------------------------------*\
+		$BUTTONS
+\*------------------------------------*/
+.btn:hover {
+  color: #fee0cd; }
+.btn:focus, .btn:active {
+  background-color: #fff; }
+.btn .icon {
+  color: #fff; }
+
+/*------------------------------------*\
+		$ICONS and $SPRITES
+\*------------------------------------*/
+/**
+ * List of icons
+ */
+/**
+ * List of sprites
+ */
+/*------------------------------------*\
+		$LINKS
+\*------------------------------------*/
+/*------------------------------------*\
+		$RESPONSIVE
+\*------------------------------------*/
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .lap-nav--unstack > li {
+    display: inline-block; }
+
+  .lap-text--center {
+    text-align: center; }
+
+  .lap-float--flush {
+    font: none !important; }
+
+  .lap-display--none {
+    display: none; }
+
+  .lap-display--block {
+    display: block; } }
+/* endif */
+/*------------------------------------*\
+		$TEXTS
+\*------------------------------------*/
+/*------------------------------------*\
+		$WRAPPERS
+\*------------------------------------*/
+/*------------------------------------*\
+		$TEMPLATE
+\*------------------------------------*/
+/**
+ * Basic template styling. Applied to all pages
+ */
+/**
+ * Custom HTML and body styling
+ */
+/**
+ * Main wrapper styling
+ */
+.wrapper {
+  position: relative;
+  max-width: 1280px;
+  padding-left: 42px;
+  padding-right: 42px;
+  margin: 0 auto; }
+
+/**
+ * Main container styling
+ */
+#content {
+  position: relative;
+  overflow: hidden; }
+
+/**
+ * Main header styling
+ */
+/**
+ * Main footer styling
+ */
+/**
+ * css3 animation effects
+ */
+.trans400, .btn:focus, .btn:active {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
