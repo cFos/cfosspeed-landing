@@ -4,4 +4,13 @@
 \*------------------------------------*/
 
 
-.text--dim { }
+.title--blue { color: $base-heading-color; }
+
+.title--blue--dim { color: $base-heading-color-dim; }
+
+
+.text--white { color: #fff; }
+
+.text--slate-blue { color: $slate-blue; }
+
+.text--dim { color: $base-font-color-dim; }

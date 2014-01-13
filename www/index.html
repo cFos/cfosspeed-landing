@@ -12,6 +12,7 @@
 	<meta name="description" content="">
 
 	<!-- fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 	<!-- css -->
 	<link href="assets/css/style.css" rel="stylesheet">
@@ -48,25 +49,28 @@
 
 
 
-	<header class="main-header">
-		<div class="wrapper">
-			<div class="grid">
+	<header class="main-header wrapper">
+			<div class="grid grid--flag">
 
 
 
-				<h1 class="main-logo grid__item one-half">
+				<div class="grid__item one-half">
 
-					<i class="icon icon--logo--cfos">LOGO</i>
-					cFos Software
+					<h1 class="main-logo h5 margin--flush">
+						<a href="" class="text--slate-blue unline">
+							<i class="icon icon--logo--cfos">LOGO</i>
+							cFos Software
+						</a>
+					</h1>
 
-				</h1>
+				</div>
 
 
 
 				<nav class="main-home grid__item one-half">
 
-					<a href="" class="main-home__button btn btn--hollow float--right">
-						<i class="icon icon--home">ICO</i>
+					<a href="" class="main-home__button btn btn--small btn--hollow float--right">
+						<i class="icon icon--home icon--fixed"></i>
 					</a>
 
 				</nav>
@@ -74,134 +78,145 @@
 
 
 			</div><!-- grid end -->
-		</div><!-- wrapper end -->
-	</header><!-- header end -->
+	</header><!-- wrapper end --><!-- header end -->
 
 
 
 
 
 	<main id="content" role="main">
-		<article class="wrapper">
+		<article>
 
 
 
 			<section class="landing-promo">
+				<div class="wrapper">
 
-				<header class="landing-promo__header align--center">
-					<h2>cFosSpeed 9</h2>
-					<p>subtitle</p>
-				</header>
+					<header class="landing-promo__header align--center">
+						<h2 class="landing-promo__title text--white h-kilo">cFosSpeed 9</h2>
+						<p class="landing-promo__subtitle text--slate-blue h5">используйте свое Интернет-подключение по полной</p>
+					</header>
 
-				<div class="grid">
+					<div class="grid grid--flag">
 
-					<div class="landing-promo__img grid__item one-half">
-						screenshoot
-					</div>
+						<div class="landing-promo__img grid__item one-half">
+							screenshoot
+						</div>
 
-					<div class="landing-promo__try grid__item one-half">
+						<div class="landing-promo__try grid__item one-half">
 
-						<ul class="nav nav--stacked">
-							<li>
-								<a href="" class="landing-promo__try__button btn">
-									<i class="icon icon--windows">WIN</i>
-									Попробовать бесплатно
-								</a>
-							</li>
-							<li>
-								<a href="" class="landing-promo__try__button btn btn--hollow">
-									<i class="icon icon--windows">WIN</i>
-									Купить
-								</a>
-							</li>
-						</ul>
+							<ul class="nav nav--stacked">
+								<li>
+									<a href="" class="landing-promo__try__button btn">
+										<i class="icon icon--windows"></i>
+										Попробовать бесплатно
+									</a>
+								</li>
+								<li>
+									<a href="" class="landing-promo__try__button btn btn--hollow">
+										Купить за <del>500</del> 299
+										<i class="icon icon--rub"></i>
+									</a>
+								</li>
+							</ul>
 
-						<p class="landing-promo__try__hint text--italic">* примечание</p>
-						<p class="landing-promo__try__hint text--italic">* примечание</p>
+							<p class="landing-promo__try__hint text--milli text--italic margin--flush--bottom margin--top">*  Новогодняя распордажа:  <strong>-60%</strong> до 30.01.2014! <br>
+							* включает пожизненное обновление</p>
 
-					</div>
+						</div>
 
-				</div><!-- grid end -->
+					</div><!-- grid end -->
 
+				</div><!-- wrapper end -->
 			</section>
 
 
 
 			<section class="landing-description align--center">
+				<div class="wrapper">
 
-				<h3>cFosSpeed — это</h3>
-				<p>text</p>
+					<h3 class="h5 title--blue"><strong>cFosSpeed</strong> — высокоскоростной сетевой дравйер<br>
+					с технологией приоритизации трафика (Traffic Shaping)</h3>
 
+					<p class="text--dim">Если вы устали от высокого пинга в играх, долгой загрузки страниц в браузере во время включеных торрентов, постоянно прерывающееся видео пока обновляется Steam, обрывающихся или тормозящих конферений в Skype, потому что вы решили загрузить страницу в браутере, то cFoSpeed — именно то, что вам нужно:</p>
+
+				</div><!-- wrapper end -->
 			</section>
 
 
 
 			<section class="landing-features">
+				<div class="wrapper">
 
-				<div class="landing-feature flag">
-					<div class="landing-feature__img flag__img">
-						<img src="" alt="">
+					<div class="landing-feature flag">
+						<div class="landing-feature__img flag__img">
+							<img src="" alt="">
+						</div>
+						<div class="landing-feature__content content">
+							<h4 class="landing-feature__title h4 title--blue--dim">Feature title</h4>
+							<p class="landing-feature__description">feature</p>
+						</div>
 					</div>
-					<div class="landing-feature__content content">
-						<h4 class="landing-feature__title">Feature title</h4>
-						<p class="landing-feature__description">feature</p>
-					</div>
-				</div>
 
-				<div class="landing-feature flag flag--left">
-					<div class="landing-feature__content content">
-						<h4 class="landing-feature__title">Feature title</h4>
-						<p class="landing-feature__description">feature</p>
+					<div class="landing-feature flag flag--left">
+						<div class="landing-feature__content content">
+							<h4 class="landing-feature__title h4 title--blue--dim">Feature title</h4>
+							<p class="landing-feature__description">feature</p>
+						</div>
+						<div class="landing-feature__img flag__img">
+							<img src="" alt="">
+						</div>
 					</div>
-					<div class="landing-feature__img flag__img">
-						<img src="" alt="">
-					</div>
-				</div>
 
+				</div><!-- wrapper end -->
 			</section>
 
 
 
 			<section class="landing-botom-try align--center">
 
-				<a href="" class="landing-promo__try__button btn btn--hollow">
-					<i class="icon icon--windows">WIN</i>
-					Купить
+				<a href="" class="landing-promo__try__button btn">
+					<i class="icon icon--windows"></i>
+					Попробовать бесплатно
 				</a>
 
 			</section>
 
 
 
-			<aside class="landing-pre-footer grid">
+			<aside class="landing-pre-footer">
+				<div class="wrapper">
+					<div class="grid grid--wider">
 
-					<section class="landing-pre-footer__more grid__item one-half">
+						<section class="landing-pre-footer__more grid__item one-half">
 
-						<h3>Heading</h3>
-						<p>description</p>
+							<h3 class="h3 title--blue">И еще многое другое</h3>
+							<p class="text--dim margin--twice--bottom">cFoSpeed умеет больше, чем описано здесь. Если хотите знать о приоритизации траффика больше, воспользуйтесь ссылкой ниже:</p>
 
-						<a href="" class="landing-pre-footer__more__button btn btn--hollow">
-							На страницу продукта »
-						</a>
+							<a href="" class="landing-pre-footer__more__button btn btn--hollow">
+								Посетить страницу cFosSpeed »
+							</a>
 
-					</section>
+						</section>
 
-					<section class="landing-pre-footer__buy grid__item one-half">
+						<section class="landing-pre-footer__buy grid__item one-half">
 
-						<h3>Heading</h3>
-						<p>description</p>
+							<h3 class="h3 title--blue">Поддержать нас</h3>
+							<p class="text--dim margin--twice--bottom">Если вам нравится cFoSpeed и вы хотите чтобы в ней продолжали появляться новые возможности — пожалуйста, поддержите нас, купив программу</p>
 
-						<a href="" class="landing-promo__try__button btn btn--hollow">
-							<i class="icon icon--windows">WIN</i>
-							Купить
-						</a>
+							<a href="" class="landing-promo__try__button btn btn--hollow">
+								Купить за <del>500</del> 299
+								<i class="icon icon--rub"></i>
+							</a>
 
-						<p class="landing-promo__try__hint text--italic">* примечание</p>
-						<p class="landing-promo__try__hint text--italic">* примечание</p>
+							<p class="landing-promo__try__hint text--milli text--italic margin--flush--bottom margin--top">*  Новогодняя распордажа:  <strong>-60%</strong> до 30.01.2014! <br>
+							* включает пожизненное обновление</p>
 
-					</section>
+						</section>
 
-			</aside><!-- grid end -->
+					</div><!-- grid end -->
+				</div><!-- wrapper end -->
+			</aside>
 
 
 
@@ -214,13 +229,13 @@
 
 	<footer class="main-footer">
 		<div class="wrapper">
-			<div class="grid">
+			<div class="grid grid--flag">
 
 
 
 				<section class="main-copyright grid__item one-half">
 
-					copyright
+					<p class="text--dim text--milli margin--flush">© 2014 cFos Software. Practice random kindness and senseless acts of beauty</p>
 
 				</section>
 
@@ -228,15 +243,15 @@
 
 				<section class="main-social grid__item one-half">
 
-					<ul class="nav main-social__buttons">
+					<ul class="main-social__buttons nav float--right">
 						<li>
 							<a href="" class="main-social__facebook btn">
-								<i class="icon icon--facebook">F</i>
+								<i class="icon icon--facebook icon--fixed"></i>
 							</a>
 						</li>
 						<li>
 							<a href="" class="main-social__twitter btn">
-								<i class="icon icon--twitter">T</i>
+								<i class="icon icon--twitter icon--fixed"></i>
 							</a>
 						</li>
 					</ul>

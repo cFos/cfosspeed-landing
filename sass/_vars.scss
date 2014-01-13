@@ -20,12 +20,14 @@
 
 $base-font-size:         14px;
 
-$base-font-family:       "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+$base-font-family:       "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
 
-$second-font-family:     "Philosopher", "PT Sans", Arial, Helvetica, sans-serif;
+$second-font-family:     $base-font-family;
 
 $headings-font-family:   $second-font-family;
-$headings-font-weight:   normal;
+
+$base-font-weight:       300;
+$headings-font-weight:   300;
 
 
 
@@ -35,7 +37,7 @@ $headings-font-weight:   normal;
 
 $h-giga-size:            96px;
 $h-mega-size:            72px;
-$h-kilo-size:            44px;
+$h-kilo-size:            48px;
 
 $h1-size:                36px; // .h1
 $h2-size:                30px; // .h2
@@ -59,33 +61,27 @@ $base-form-font-size:    $base-font-size;
  * Base colors
  */
 
-$base-font-color:               #313232;
+$base-font-color:               #c7dcf1;
+$base-font-color-dim:           #326b97;
 
 
 $base-link-color:               #35adda;
 $base-link-hover-color:         #8db4e2;
 
 
-$base-heading-color:            #585c5d;
+$base-heading-color:            #448bc9;
+$base-heading-color-dim:        #3b76a9;
 
 
-$base-form-bg-color:            #FFF;
-$base-form-color:               #8b8b8b;
-
-$base-form-placeholder-color:   #a9a9a9;
+$base-button-bg-color:          #7baa1b;
+$base-button-color:             #fff;
 
 
-$base-button-bg-color:          #000;
-$base-button-color:             #fee0cd;
+/**
+ * Additional colors
+ */
 
-$base-button-bg-color-positive: #1fa205;
-$base-button-color-positive:    #7ef76a;
-
-$base-button-bg-color-negative: #a20b05;
-$base-button-color-negative:    #ff8877;
-
-$base-button-bg-color-disabled: #d3d3d3;
-$base-button-color-disabled:    #464646;
+$slate-blue:                    #7b9aff;
 
 
 
@@ -93,12 +89,24 @@ $base-button-color-disabled:    #464646;
 		$ASSETS
 \*------------------------------------*/
 
+$base-assets-path:       '../../assets/'!default;
+	$base-images-path:     '#{$base-assets-path}images/'!default;
+	$base-fonts-path:      '#{$base-assets-path}fonts/'!default;
+
 /**
  * Icon-font
  */
 
 $base-icon-font:         fontello;
-$base-icon-font-version: 72944731;
+$base-icon-font-version: 68035387;
+
+
+/**
+ * Backgrounds
+ */
+
+$base-bg:                       url(#{$base-images-path}bg.png) repeat;
+$second-bg:                     url(#{$base-images-path}bg--dark.png) repeat;
 
 
 

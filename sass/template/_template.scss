@@ -53,15 +53,57 @@ body { }
  * Main header styling
  */
 
+ .main-header {
+ 	padding-top: $half-spacing-unit;
+ 	padding-bottom: $half-spacing-unit;
+ }
 
 
+
+/**
+ * Main content
+ */
+
+.landing-promo {
+	background: url(#{$base-images-path}landing-promo-bg.jpg) top center no-repeat;
+
+	padding-top: $base-spacing-unit * 5;
+	padding-bottom: $base-spacing-unit * 5;
+}
+
+
+.landing-description {
+	background: $second-bg;
+
+	padding-top: $base-spacing-unit * 3;
+	padding-bottom: $base-spacing-unit * 3;
+}
+
+
+.landing-features {
+	padding-top: $base-spacing-unit * 4;
+	padding-bottom: $base-spacing-unit * 4;
+}
+
+
+.landing-pre-footer {
+	background: $second-bg;
+
+	padding-top: $base-spacing-unit * 3;
+	padding-bottom: $base-spacing-unit * 3;
+}
 
 
 /**
  * Main footer styling
  */
 
+.main-footer {
+	background-color: #090c0f;
 
+	padding-top: $base-spacing-unit;
+	padding-bottom: $base-spacing-unit;
+}
 
 
 
