@@ -8,7 +8,13 @@
  * List of icons
  */
 
-
+ .icon--ok:before        { content: '\e800'; }
+ .icon--home:before      { content: '\e803'; }
+ .icon--rub:before    { content: '\e806'; }
+ .icon--facebook:before  { content: '\e802'; }
+ .icon--twitter:before   { content: '\e801'; }
+ .icon--vkontakte:before { content: '\e805'; }
+ .icon--windows:before   { content: '\e804'; }
 
 
 
