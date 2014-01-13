@@ -28,11 +28,17 @@
 /**
  * Base colors
  */
+/**
+ * Additional colors
+ */
 /*------------------------------------*\
 		$ASSETS
 \*------------------------------------*/
 /**
  * Icon-font
+ */
+/**
+ * Backgrounds
  */
 /*------------------------------------*\
 		$OPTIONS
@@ -54,7 +60,7 @@
 \*------------------------------------*/
 /*
 
-		Version: 1.6.2
+		Version: 1.8.2
 
 */
 /**
@@ -119,10 +125,13 @@
  * Second font-family
  */
 /**
- * Headers font-family and weight
+ * Headers font-family
  */
 /**
- * Forms font-family and weight
+ * Forms font-family (and weight, if needed)
+ */
+/**
+ * Font weights
  */
 /*------------------------------------*\
 		$FONT-SIZES
@@ -178,6 +187,7 @@
  */
 /**
  * Base headings colors
+ * Should be declared in your own stylesheet
  */
 /**
  * Forms
@@ -736,11 +746,11 @@
 html {
   min-height: 100%;
   overflow-y: scroll;
-  font: 14px/21px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
-  color: #313232; }
+  font: 300 14px/21px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #c7dcf1; }
 
 body {
-  background: #f2f2f2; }
+  background: url(../../assets/images/bg.png) repeat; }
 
 /*------------------------------------*\
 		$NORMALIZE
@@ -1756,8 +1766,8 @@ ul, ol, dd {
   /* [7] */
   padding-left: 1em;
   /* [7] */
-  color: #fee0cd;
-  background-color: black; }
+  color: white;
+  background-color: #7baa1b; }
   .btn, .btn:hover {
     text-decoration: none;
     /* [9] */ }
@@ -1890,7 +1900,7 @@ ul, ol, dd {
 			<div class="flag__img">
 				<img src="" alt="">
 			</div>
-			<div class="content">
+			<div class="flag__content">
 				<p></p>
 			</div>
 		</div>
@@ -1935,19 +1945,19 @@ ul, ol, dd {
 \*------------------------------------*/
 ::-webkit-input-placeholder {
   color: darkgrey;
-  font: italic 14px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+  font: italic 14px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
 
 :-moz-placeholder {
   color: darkgrey;
-  font: italic 14px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+  font: italic 14px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
 
 ::-moz-placeholder {
   color: darkgrey;
-  font: italic 14px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+  font: italic 14px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
 
 :-ms-input-placeholder {
   color: darkgrey;
-  font: italic 14px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+  font: italic 14px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
 
 fieldset + fieldset {
   margin-top: 42px; }
@@ -1966,7 +1976,7 @@ textarea,
 label {
   background-color: white;
   color: #8b8b8b;
-  font: 14px "PT Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
+  font: 14px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
 
 /**
  * Group sets of form fields in a list, e.g.:
@@ -2085,7 +2095,25 @@ label {
     text-align: left; }
 
 /**
- * Very infrequently occuring grid wrappers as children of grid wrappers.
+ * Throws grid in flag mode
+ * In that mode grid behaves like table and it's content
+ * centred vertically
+ */
+.grid--flag {
+  display: table; }
+  .grid--flag > .grid__item {
+    display: table-cell;
+    vertical-align: middle; }
+
+/**
+ * Extends .grid--flag
+ * Centrers content bottom
+ */
+.grid--flag--bottom > .grid__item {
+  vertical-align: bottom; }
+
+/**
+ * Very infrequently occurring grid wrappers as children of grid wrappers.
  */
 .grid > .grid {
   margin-left: 0; }
@@ -2105,7 +2133,7 @@ label {
   letter-spacing: normal;
   word-spacing: normal; }
 
-/* Used to fix strange behavior in Firefox on inline-grids */
+/* Used to fix strange behaviour in Firefox on inline-grids */
 .grid--nofix {
   letter-spacing: normal; }
 
@@ -2120,32 +2148,32 @@ label {
 h1, .h1 {
   font-size: 36px;
   line-height: 1.16667;
-  font-weight: normal; }
+  font-weight: 300; }
 
 h2, .h2 {
   font-size: 30px;
   line-height: 1.4;
-  font-weight: normal; }
+  font-weight: 300; }
 
 h3, .h3 {
   font-size: 24px;
   line-height: 1.75;
-  font-weight: normal; }
+  font-weight: 300; }
 
 h4, .h4 {
   font-size: 21px;
   line-height: 1;
-  font-weight: normal; }
+  font-weight: 300; }
 
 h5, .h5 {
   font-size: 18px;
   line-height: 1.16667;
-  font-weight: normal; }
+  font-weight: 300; }
 
 h6, .h6 {
   font-size: 16px;
   line-height: 1.3125;
-  font-weight: normal; }
+  font-weight: 300; }
 
 /**
  * A series of classes for setting massive type; for use in heroes, mastheads,
@@ -2160,9 +2188,9 @@ h6, .h6 {
   line-height: 1.16667; }
 
 .h-kilo {
-  font-family: "Philosopher", "PT Sans", Arial, Helvetica, sans-serif;
-  font-size: 44px;
-  line-height: 1.43182; }
+  font-family: "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 1.3125; }
 
 /*------------------------------------*\
 		$ICONS and $SPRITES
@@ -2211,8 +2239,8 @@ h6, .h6 {
  */
 @font-face {
   font-family: "fontello";
-  src: url("../../assets/fonts/fontello.eot?72944731");
-  src: url("../../assets/fonts/fontello.eot?72944731#iefix") format("embedded-opentype"), url("../../assets/fonts/fontello.woff?72944731") format("woff"), url("../../assets/fonts/fontello.ttf?72944731") format("truetype"), url("../../assets/fonts/fontello.svg?72944731#fontello") format("svg");
+  src: url("../../assets/fonts/fontello.eot?68035387");
+  src: url("../../assets/fonts/fontello.eot?68035387#iefix") format("embedded-opentype"), url("../../assets/fonts/fontello.woff?68035387") format("woff"), url("../../assets/fonts/fontello.ttf?68035387") format("truetype"), url("../../assets/fonts/fontello.svg?68035387#fontello") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2350,10 +2378,10 @@ a,
  */
 .unlink {
   text-decoration: none;
-  color: #313232; }
+  color: #c7dcf1; }
   .unlink:hover {
     text-decoration: none;
-    color: #313232; }
+    color: #c7dcf1; }
 
 /*------------------------------------*\
 		$LISTS
@@ -2993,7 +3021,7 @@ table {
 		$BUTTONS
 \*------------------------------------*/
 .btn:hover {
-  color: #fee0cd; }
+  color: white; }
 .btn:focus, .btn:active {
   background-color: #fff; }
 .btn .icon {
@@ -3005,6 +3033,27 @@ table {
 /**
  * List of icons
  */
+.icon--ok:before {
+  content: '\e800'; }
+
+.icon--home:before {
+  content: '\e803'; }
+
+.icon--rub:before {
+  content: '\e806'; }
+
+.icon--facebook:before {
+  content: '\e802'; }
+
+.icon--twitter:before {
+  content: '\e801'; }
+
+.icon--vkontakte:before {
+  content: '\e805'; }
+
+.icon--windows:before {
+  content: '\e804'; }
+
 /**
  * List of sprites
  */
@@ -3033,6 +3082,21 @@ table {
 /*------------------------------------*\
 		$TEXTS
 \*------------------------------------*/
+.title--blue {
+  color: #448bc9; }
+
+.title--blue--dim {
+  color: #3b76a9; }
+
+.text--white {
+  color: #fff; }
+
+.text--slate-blue {
+  color: #7b9aff; }
+
+.text--dim {
+  color: #326b97; }
+
 /*------------------------------------*\
 		$WRAPPERS
 \*------------------------------------*/
@@ -3065,9 +3129,40 @@ table {
 /**
  * Main header styling
  */
+.main-header {
+  padding-top: 10.5px;
+  padding-bottom: 10.5px; }
+
+/**
+ * Main content
+ */
+.landing-promo {
+  background: url(../../assets/images/landing-promo-bg.jpg) top center no-repeat;
+  padding-top: 105px;
+  padding-bottom: 105px; }
+
+.landing-description {
+  background: url(../../assets/images/bg--dark.png) repeat;
+  padding-top: 63px;
+  padding-bottom: 63px; }
+
+.landing-features {
+  padding-top: 84px;
+  padding-bottom: 84px; }
+
+.landing-pre-footer {
+  background: url(../../assets/images/bg--dark.png) repeat;
+  padding-top: 63px;
+  padding-bottom: 63px; }
+
 /**
  * Main footer styling
  */
+.main-footer {
+  background-color: #090c0f;
+  padding-top: 21px;
+  padding-bottom: 21px; }
+
 /**
  * css3 animation effects
  */
