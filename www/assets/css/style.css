@@ -60,7 +60,7 @@
 \*------------------------------------*/
 /*
 
-		Version: 1.8.2
+		Version: 1.11.1
 
 */
 /**
@@ -328,8 +328,7 @@
  * Extend the clearfix class with Sass to avoid the `.clear` class appearing over
  * and over in your markup.
  */
-.clear:after, .grid:after, .island:after,
-.islet:after, .multi-list:after, .media:after, .nav:after {
+.clear:after, .grid:after, .nav:after {
   content: "";
   display: table;
   clear: both; }
@@ -1132,7 +1131,7 @@ video {
  * Demo: jsfiddle.net/inuitcss/WS4Ge
  *
  */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 599px) {
   /**
   * Whole
   */
@@ -1231,205 +1230,10 @@ video {
 
   .palm-eleven-twelfths {
     width: 91.666%; } }
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
-  /**
-  * Whole
-  */
-  .lap-one-whole {
-    width: 100%; }
-
-  /**
-  * Halves
-  */
-  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
-    width: 50%; }
-
-  /**
-  * Thirds
-  */
-  .lap-one-third, .lap-two-sixths, .lap-four-twelfths {
-    width: 33.333%; }
-
-  .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths {
-    width: 66.666%; }
-
-  /**
-  * Quarters
-  */
-  .lap-one-quarter, .lap-two-eighths, .lap-three-twelfths {
-    width: 25%; }
-
-  .lap-three-quarters, .lap-six-eighths, .lap-nine-twelfths {
-    width: 75%; }
-
-  /**
-  * Fifths
-  */
-  .lap-one-fifth, .lap-two-tenths {
-    width: 20%; }
-
-  .lap-two-fifths, .lap-four-tenths {
-    width: 40%; }
-
-  .lap-three-fifths, .lap-six-tenths {
-    width: 60%; }
-
-  .lap-four-fifths, .lap-eight-tenths {
-    width: 80%; }
-
-  /**
-  * Sixths
-  */
-  .lap-one-sixth, .lap-two-twelfths {
-    width: 16.666%; }
-
-  .lap-five-sixths, .lap-ten-twelfths {
-    width: 83.333%; }
-
-  /**
-  * Eighths
-  */
-  .lap-one-eighth {
-    width: 12.5%; }
-
-  .lap-three-eighths {
-    width: 37.5%; }
-
-  .lap-five-eighths {
-    width: 62.5%; }
-
-  .lap-seven-eighths {
-    width: 87.5%; }
-
-  /**
-  * Tenths
-  */
-  .lap-one-tenth {
-    width: 10%; }
-
-  .lap-three-tenths {
-    width: 30%; }
-
-  .lap-seven-tenths {
-    width: 70%; }
-
-  .lap-nine-tenths {
-    width: 90%; }
-
-  /**
-  * Twelfths
-  */
-  .lap-one-twelfth {
-    width: 8.333%; }
-
-  .lap-five-twelfths {
-    width: 41.666%; }
-
-  .lap-seven-twelfths {
-    width: 58.333%; }
-
-  .lap-eleven-twelfths {
-    width: 91.666%; } }
-@media only screen and (min-width: 481px) {
-  /**
-  * Whole
-  */
-  .lap-and-up-one-whole {
-    width: 100%; }
-
-  /**
-  * Halves
-  */
-  .lap-and-up-one-half, .lap-and-up-two-quarters, .lap-and-up-three-sixths, .lap-and-up-four-eighths, .lap-and-up-five-tenths, .lap-and-up-six-twelfths {
-    width: 50%; }
-
-  /**
-  * Thirds
-  */
-  .lap-and-up-one-third, .lap-and-up-two-sixths, .lap-and-up-four-twelfths {
-    width: 33.333%; }
-
-  .lap-and-up-two-thirds, .lap-and-up-four-sixths, .lap-and-up-eight-twelfths {
-    width: 66.666%; }
-
-  /**
-  * Quarters
-  */
-  .lap-and-up-one-quarter, .lap-and-up-two-eighths, .lap-and-up-three-twelfths {
-    width: 25%; }
-
-  .lap-and-up-three-quarters, .lap-and-up-six-eighths, .lap-and-up-nine-twelfths {
-    width: 75%; }
-
-  /**
-  * Fifths
-  */
-  .lap-and-up-one-fifth, .lap-and-up-two-tenths {
-    width: 20%; }
-
-  .lap-and-up-two-fifths, .lap-and-up-four-tenths {
-    width: 40%; }
-
-  .lap-and-up-three-fifths, .lap-and-up-six-tenths {
-    width: 60%; }
-
-  .lap-and-up-four-fifths, .lap-and-up-eight-tenths {
-    width: 80%; }
-
-  /**
-  * Sixths
-  */
-  .lap-and-up-one-sixth, .lap-and-up-two-twelfths {
-    width: 16.666%; }
-
-  .lap-and-up-five-sixths, .lap-and-up-ten-twelfths {
-    width: 83.333%; }
-
-  /**
-  * Eighths
-  */
-  .lap-and-up-one-eighth {
-    width: 12.5%; }
-
-  .lap-and-up-three-eighths {
-    width: 37.5%; }
-
-  .lap-and-up-five-eighths {
-    width: 62.5%; }
-
-  .lap-and-up-seven-eighths {
-    width: 87.5%; }
-
-  /**
-  * Tenths
-  */
-  .lap-and-up-one-tenth {
-    width: 10%; }
-
-  .lap-and-up-three-tenths {
-    width: 30%; }
-
-  .lap-and-up-seven-tenths {
-    width: 70%; }
-
-  .lap-and-up-nine-tenths {
-    width: 90%; }
-
-  /**
-  * Twelfths
-  */
-  .lap-and-up-one-twelfth {
-    width: 8.333%; }
-
-  .lap-and-up-five-twelfths {
-    width: 41.666%; }
-
-  .lap-and-up-seven-twelfths {
-    width: 58.333%; }
-
-  .lap-and-up-eleven-twelfths {
-    width: 91.666%; } }
-@media only screen and (max-width: 1023px) {
+/* endif */
+/* endif */
+/* endif */
+@media only screen and (max-width: 949px) {
   /**
   * Whole
   */
@@ -1528,105 +1332,8 @@ video {
 
   .portable-eleven-twelfths {
     width: 91.666%; } }
-@media only screen and (min-width: 1024px) {
-  /**
-  * Whole
-  */
-  .desk-one-whole {
-    width: 100%; }
-
-  /**
-  * Halves
-  */
-  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
-    width: 50%; }
-
-  /**
-  * Thirds
-  */
-  .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
-    width: 33.333%; }
-
-  .desk-two-thirds, .desk-four-sixths, .desk-eight-twelfths {
-    width: 66.666%; }
-
-  /**
-  * Quarters
-  */
-  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
-    width: 25%; }
-
-  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
-    width: 75%; }
-
-  /**
-  * Fifths
-  */
-  .desk-one-fifth, .desk-two-tenths {
-    width: 20%; }
-
-  .desk-two-fifths, .desk-four-tenths {
-    width: 40%; }
-
-  .desk-three-fifths, .desk-six-tenths {
-    width: 60%; }
-
-  .desk-four-fifths, .desk-eight-tenths {
-    width: 80%; }
-
-  /**
-  * Sixths
-  */
-  .desk-one-sixth, .desk-two-twelfths {
-    width: 16.666%; }
-
-  .desk-five-sixths, .desk-ten-twelfths {
-    width: 83.333%; }
-
-  /**
-  * Eighths
-  */
-  .desk-one-eighth {
-    width: 12.5%; }
-
-  .desk-three-eighths {
-    width: 37.5%; }
-
-  .desk-five-eighths {
-    width: 62.5%; }
-
-  .desk-seven-eighths {
-    width: 87.5%; }
-
-  /**
-  * Tenths
-  */
-  .desk-one-tenth {
-    width: 10%; }
-
-  .desk-three-tenths {
-    width: 30%; }
-
-  .desk-seven-tenths {
-    width: 70%; }
-
-  .desk-nine-tenths {
-    width: 90%; }
-
-  /**
-  * Twelfths
-  */
-  .desk-one-twelfth {
-    width: 8.333%; }
-
-  .desk-five-twelfths {
-    width: 41.666%; }
-
-  .desk-seven-twelfths {
-    width: 58.333%; }
-
-  .desk-eleven-twelfths {
-    width: 91.666%; } }
+/* endif */
+/* endif */
 /**
  * If you have set the additional `$responsive-extra` variable to ‘true’ in
  * `_vars.scss` then you now have access to the following class available to
@@ -1679,45 +1386,6 @@ hr {
  */
 ul, ol, dd {
   margin-left: 42px; }
-
-/*------------------------------------*\
-		$BREADCRUMB
-\*------------------------------------*/
-/**
- * Simple breadcrumb styling to apply to (ordered) lists. Extends `.nav`, e.g.:
- *
-		<ul class="nav breadcrumb">
-			<li class="breadcrumb_root"><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">The Board</a></li>
-			<li class="breadcrumb_current">Directors</li>
-		</ul>
- *
- * Demo: jsfiddle.net/inuitcss/rkAY9
- *
- */
-.breadcrumb > li + li:before {
-  content: "\00A0" "\2192" "\00A0" "\00A0"; }
-
-/**
- * Same breadcrumb, but with heading as last item
- *
-		<ul class="nav breadcrumb--rev">
-			<li class="breadcrumb_root"><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">The Board</a></li>
-		</ul>
-		<h1>Header as last item</h1>
- *
- */
-.breadcrumb--rev > li:after {
-  content: "\00A0" "\00A0" "\2192" "\00A0"; }
-
-/**
-* Denote the root of the tree and current state styling
-*/
-.breadcrumb__root {
-  font-weight: bold; }
 
 /*------------------------------------*\
 	$BUTTONS
@@ -1892,140 +1560,6 @@ ul, ol, dd {
   /* [1] */ }
 
 /*------------------------------------*\
-		$FLAG
-\*------------------------------------*/
-/**
-* Place any image- and text-like content side-by-side, arranged vertically,
-* horizontally or by baseline
-* E.g.:
-*
-		<div class="flag">
-			<div class="flag__img">
-				<img src="" alt="">
-			</div>
-			<div class="flag__content">
-				<p></p>
-			</div>
-		</div>
- *
- */
-.flag {
-  display: table;
-  width: 100%; }
-
-.flag--top .flag__img,
-.flag--top .flag__content {
-  vertical-align: top; }
-
-.flag--bottom .flag__img,
-.flag--bottom .flag__content {
-  vertical-align: bottom; }
-
-.flag--right .flag__img {
-  padding-right: 0;
-  padding-left: 21px; }
-
-.flag__img,
-.flag__content {
-  display: table-cell;
-  vertical-align: middle; }
-
-.flag__img {
-  padding-right: 21px; }
-  .flag__img > img {
-    display: block;
-    max-width: none; }
-
-.flag__content {
-  width: 100%; }
-
-.flag__content,
-.flag__content > :last-child {
-  margin-bottom: 0; }
-
-/*------------------------------------*\
-		$FORMS
-\*------------------------------------*/
-::-webkit-input-placeholder {
-  color: darkgrey;
-  font: italic 14px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
-
-:-moz-placeholder {
-  color: darkgrey;
-  font: italic 14px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
-
-::-moz-placeholder {
-  color: darkgrey;
-  font: italic 14px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
-
-:-ms-input-placeholder {
-  color: darkgrey;
-  font: italic 14px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
-
-fieldset + fieldset {
-  margin-top: 42px; }
-
-.text-input,
-input,
-textarea,
-fieldset {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.text-input,
-input,
-textarea,
-label {
-  background-color: white;
-  color: #8b8b8b;
-  font: 14px "Open Sans", "Trebuchet MS", Arial, Helvetica, sans-serif; }
-
-/**
- * Group sets of form fields in a list, e.g.:
- *
-		<ul class="form-fields">
-				<li>
-						<label />
-						<input />
-				</li>
-				<li>
-						<label />
-						<select />
-				</li>
-				<li>
-						<label />
-						<input />
-				</li>
-		</ul>
- *
- */
-.form-fields {
-  list-style: none;
-  margin: 0; }
-  .form-fields > li + li {
-    margin-top: 21px; }
-
-/**
- * Extra help text displayed after a field when that field is in focus, e.g.:
- *
-		<label for=email>Email:</label>
-		<input type=email class=text-input id=email>
-		<small class=extra-help>.edu emails only</small>
- *
- * We leave the help text in the document flow and merely set it to
- * `visibility:hidden;`. This means that it won’t interfere with anything once
- * it reappears.
- *
- */
-/*small*/
-.extra-help {
-  display: inline-block;
-  visibility: hidden; }
-  .text-input:active + .extra-help, .text-input:focus + .extra-help {
-    visibility: visible; }
-
-/*------------------------------------*\
 	$GRIDS
 \*------------------------------------*/
 /**
@@ -2140,6 +1674,38 @@ label {
 .grid--nofix {
   letter-spacing: normal; }
 
+/**
+ * Responsive grid classes
+ */
+@media only screen and (max-width: 599px) {
+  .palm-grid {
+    display: inline-block; }
+    .palm-grid > .grid__item {
+      display: inline-block;
+      vertical-align: top; }
+
+  .palm-grid--full {
+    margin-left: 0; }
+    .palm-grid--full > .grid__item {
+      padding-left: 0; } }
+/* endif */
+/* endif */
+/* endif */
+@media only screen and (max-width: 949px) {
+  .portable-grid {
+    display: inline-block; }
+    .portable-grid > .grid__item {
+      display: inline-block;
+      vertical-align: top; }
+
+  .portable-grid--full {
+    margin-left: 0; }
+    .portable-grid--full > .grid__item {
+      padding-left: 0; } }
+/* endif */
+/* endif */
+/* endif */
+/* endif */
 /*------------------------------------*\
 	$HEADINGS
 \*------------------------------------*/
@@ -2303,6 +1869,7 @@ h6, .h6 {
 .sprite--right {
   margin-left: .36em; }
 
+/* endif */
 /*------------------------------------*\
 	$IMAGES
 \*------------------------------------*/
@@ -2338,38 +1905,7 @@ img[height] {
   margin-bottom: 10.5px;
   margin-left: auto; }
 
-/*------------------------------------*\
-		$ISLAND
-\*------------------------------------*/
-/**
- * Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object
- * E.g.:
- *
-		<div class=island>
-				I am boxed off.
-		</div>
- *
- * Demo: jsfiddle.net/inuitcss/u8pV3
- *
- */
-.island,
-.islet {
-  display: block; }
-  .island > :last-child,
-  .island > :last-child,
-  .islet > :last-child,
-  .islet > :last-child {
-    margin-bottom: 0; }
-
-.island {
-  padding: 21px; }
-
-/**
- * Just like `.island`, only smaller.
- */
-.islet {
-  padding: 10.5px; }
-
+/* endif */
 /*------------------------------------*\
 		$LINKS
 \*------------------------------------*/
@@ -2377,13 +1913,11 @@ img[height] {
  * Default link styling
  */
 a,
-.base-link,
-[data-tooltip] {
+.base-link {
   color: #35adda;
   text-decoration: underline; }
   a:hover,
-  .base-link:hover,
-  [data-tooltip]:hover {
+  .base-link:hover {
     color: white; }
 
 /**
@@ -2398,187 +1932,8 @@ a,
     text-decoration: none;
     color: #c7dcf1; }
 
-/*------------------------------------*\
-		$LISTS
-\*------------------------------------*/
-/**
- * Create big blocky lists of content, e.g.:
- *
-		<ul class="block-list">
-			<li>Foo</li>
-			<li>Bar</li>
-			<li>Baz</li>
-			<li><a href="#" class="block-list__link">Foo Bar Baz</a></li>
-		</ul>
- *
- * Extend this object in your theme stylesheet.
- *
- * Demo: jsfiddle.net/inuitcss/hR57q
- *
- */
-/*ul*/
-.block-list {
-  list-style: none;
-  margin-left: 0; }
-  .block-list > li {
-    padding: 10.5px; }
-  .block-list > li > a {
-    display: block;
-    padding: 10.5px;
-    margin: -10.5px; }
-
-/**
- * The `.multi-list` object is a lot like the `.matrix` object only without the
- * blocky borders and padding.
- *
-		<ul class="multi-list  four-cols">
-				<li>Lorem</li>
-				<li>Ipsum</li>
-				<li>Dolor</li>
-				<li>Sit</li>
-		</ul>
- *
- * Demo: jsfiddle.net/inuitcss/Y2zrU
- *
- */
-/*ul*/
-.multi-list {
-  list-style: none;
-  margin-left: 0; }
-  .multi-list > li {
-    float: left; }
-
-/**
- * Apply these classes alongside the `.matrix` or `.multi-list` classes on
- * lists to determine how wide their columns are.
- */
-/*ul*/
-.two-cols > li {
-  width: 50%; }
-
-/*ul*/
-.three-cols > li {
-  width: 33.333%; }
-
-/*ul*/
-.four-cols > li {
-  width: 25%; }
-
-/*ul*/
-.five-cols > li {
-  width: 20%; }
-
-/**
- * Unfortunately we have to qualify this selector in order to bring its
- * specificity above the `.[number]-cols > li` selectors above.
- */
-/*ul*/
-.multi-list > .all-cols {
-  width: 100%; }
-
-/**
- * Applies standard margin between ul's elements
- */
-/*ul*/
-.list--margin > li + li {
-  margin-top: 21px; }
-
-/**
- * Applies half margin between ul's elements
- */
-/*ul*/
-.list--margin--half > li + li {
-  margin-top: 10.5px; }
-
-/**
- * Applies twice margin between ul's elements
- */
-/*ul*/
-.list--margin--twice > li + li {
-  margin-top: 42px; }
-
-/**
- * Ordered list defaults margins
- */
-ol {
-  margin-left: 42px; }
-  ol li + li {
-    margin-top: 10.5px; }
-
-/**
- * Iconic list
- *
- * List with sprites or icons instead of bulletins.
- * Should be used in conjuration with icons or sprites:
- *
-		<ul class="list--iconic">
-			<li>
-				<i class="icon icon--ok"></i>
-				Item1
-			</li>
-			<li>
-				<i class="sprite sprite--ok"></i>
-				Item2
-			</li>
-		</ul>
- *
- *	Note: iconic list relays on `:first-child` selector, so it's important
- *       to keep bulletin-icons right after `<li>` tag.
- *
- *	1. Pusing list twice left to align it with default list
- *	   with default bulletings
- *	2. We have to ensure that it targets only first icons and not all
- *	   icons in list
- * 	3. Used to algin icons properly and center it according to the first
- *	   line of list
- */
-/*ul*/
-.list--iconic {
-  margin-left: 42px; }
-  .list--iconic li {
-    position: relative; }
-    .list--iconic li > .icon:first-child,
-    .list--iconic li > .sprite:first-child {
-      position: absolute;
-      left: -20px;
-      top: .4em; }
-
-/*------------------------------------*\
-		$MEDIA
-\*------------------------------------*/
-/**
- * Place any image- and text-like content side-by-side, as per:
- * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
- * E.g.:
- *
-		<div class="media">
-			<img src=http://placekitten.com/200/300 alt="" class="img">
-			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		</div>
- *
- * Demo: jsfiddle.net/inuitcss/cf4Qs
- *
- */
-.media {
-  display: block; }
-
-.media--right .media__img {
-  float: right;
-  margin-left: 21px; }
-
-.media__img {
-  float: left;
-  display: block;
-  margin-right: 21px; }
-
-.media__content {
-  overflow: hidden; }
-
-.media__content,
-.media__content > :last-child {
-  margin-bottom: 0; }
-
+/* endif */
+/* endif */
 /*------------------------------------*\
 		$NAV
 \*------------------------------------*/
@@ -2683,129 +2038,8 @@ ol {
 .nav--keywords > li:last-child:after {
   display: none; }
 
-/*------------------------------------*\
-	$TABLES
-\*------------------------------------*/
-table {
-  width: 100%; }
-
-/**
- * Apply paddings for all th and td
- */
-.table--padding th,
-.table--padding td {
-  padding: 5.25px;
-  text-align: left; }
-  @media screen and (min-width: 480px) {
-    .table--padding th,
-    .table--padding td {
-      padding: 10.5px; } }
-
-/**
- * Cell alignments
- */
-[colspan] {
-  text-align: center; }
-
-[colspan="1"] {
-  text-align: left; }
-
-[rowspan] {
-  vertical-align: middle; }
-
-[rowspan="1"] {
-  vertical-align: top; }
-
-/**
- * In the HTML above we see several `col` elements with classes whose numbers
- * represent a percentage width for that column. We leave one column free of a
- * class so that column can soak up the effects of any accidental breakage in
- * the table.
- */
-.t5 {
-  width: 5%; }
-
-.t10 {
-  width: 10%; }
-
-.t12 {
-  width: 12.5%; }
-
-/* 1/8 */
-.t15 {
-  width: 15%; }
-
-.t20 {
-  width: 20%; }
-
-.t25 {
-  width: 25%; }
-
-/* 1/4 */
-.t30 {
-  width: 30%; }
-
-.t33 {
-  width: 33.333%; }
-
-/* 1/3 */
-.t35 {
-  width: 35%; }
-
-.t37 {
-  width: 37.5%; }
-
-/* 3/8 */
-.t40 {
-  width: 40%; }
-
-.t45 {
-  width: 45%; }
-
-.t50 {
-  width: 50%; }
-
-/* 1/2 */
-.t55 {
-  width: 55%; }
-
-.t60 {
-  width: 60%; }
-
-.t62 {
-  width: 62.5%; }
-
-/* 5/8 */
-.t65 {
-  width: 65%; }
-
-.t66 {
-  width: 66.666%; }
-
-/* 2/3 */
-.t70 {
-  width: 70%; }
-
-.t75 {
-  width: 75%; }
-
-/* 3/4*/
-.t80 {
-  width: 80%; }
-
-.t85 {
-  width: 85%; }
-
-.t87 {
-  width: 87.5%; }
-
-/* 7/8 */
-.t90 {
-  width: 90%; }
-
-.t95 {
-  width: 95%; }
-
+/* endif */
+/* endif */
 /*------------------------------------*\
 		$TEXTS
 \*------------------------------------*/
@@ -2833,202 +2067,19 @@ table {
 		</span>
  *
  */
-[data-tooltip] {
-  position: relative;
-  cursor: help;
-  /* tooltip arrow */
-  /* tooltip body */ }
-  [data-tooltip]:before, [data-tooltip]:after {
-    position: absolute;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: hidden;
-    opacity: 0;
-    z-index: 1000000;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    transition: 0.3s ease; }
-  [data-tooltip]:hover:before, [data-tooltip]:hover:after, [data-tooltip]:focus:before, [data-tooltip]:focus:after {
-    visibility: visible;
-    opacity: 1; }
-  [data-tooltip]:before {
-    content: '';
-    position: absolute;
-    background: transparent;
-    border: 6px solid transparent;
-    z-index: 1000001; }
-  [data-tooltip]:after {
-    content: attr(data-tooltip);
-    background: rgba(1, 13, 14, 0.68);
-    color: white;
-    padding: .7em;
-    font-size: 12px;
-    line-height: 1;
-    white-space: nowrap;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    font-weight: normal;
-    text-transform: none; }
-
-.tooltip--sharp:after {
-  border-radius: 0; }
-
-.tooltip--always:after, .tooltip--always:before {
-  opacity: 1;
-  visibility: visible; }
-.tooltip--always.tooltip--top:after, .tooltip--always.tooltip--top:before {
-  -webkit-transform: translateY(-8px);
-  -moz-transform: translateY(-8px);
-  -ms-transform: translateY(-8px);
-  -o-transform: translateY(-8px);
-  transform: translateY(-8px); }
-.tooltip--always.tooltip--bottom:after, .tooltip--always.tooltip--bottom:before {
-  -webkit-transform: translateY(8px);
-  -moz-transform: translateY(8px);
-  -ms-transform: translateY(8px);
-  -o-transform: translateY(8px);
-  transform: translateY(8px); }
-.tooltip--always.tooltip--left:after, .tooltip--always.tooltip--left:before {
-  -webkit-transform: translateX(-8px);
-  -moz-transform: translateX(-8px);
-  -ms-transform: translateX(-8px);
-  -o-transform: translateX(-8px);
-  transform: translateX(-8px); }
-.tooltip--always.tooltip--right:after, .tooltip--always.tooltip--right:before {
-  -webkit-transform: translateX(8px);
-  -moz-transform: translateX(8px);
-  -ms-transform: translateX(8px);
-  -o-transform: translateX(8px);
-  transform: translateX(8px); }
-
 /**
- * set default color for tooltip arrows
- */
-.tooltip--top:before {
-  border-top-color: rgba(1, 13, 14, 0.68); }
-
-.tooltip--bottom:before {
-  border-bottom-color: rgba(1, 13, 14, 0.68); }
-
-.tooltip--left:before {
-  border-left-color: rgba(1, 13, 14, 0.68); }
-
-.tooltip--right:before {
-  border-right-color: rgba(1, 13, 14, 0.68); }
-
-.tooltip--error.tooltip--top:before {
-  border-top-color: #b34e4d; }
-.tooltip--error.tooltip--bottom:before {
-  border-bottom-color: #b34e4d; }
-.tooltip--error.tooltip--left:before {
-  border-left-color: #b34e4d; }
-.tooltip--error.tooltip--right:before {
-  border-right-color: #b34e4d; }
-.tooltip--error:after {
-  background-color: #b34e4d; }
-
-.tooltip--info.tooltip--top:before {
-  border-top-color: #3986ac; }
-.tooltip--info.tooltip--bottom:before {
-  border-bottom-color: #3986ac; }
-.tooltip--info.tooltip--left:before {
-  border-left-color: #3986ac; }
-.tooltip--info.tooltip--right:before {
-  border-right-color: #3986ac; }
-.tooltip--info:after {
-  background-color: #3986ac; }
-
-.tooltip--success.tooltip--top:before {
-  border-top-color: #458746; }
-.tooltip--success.tooltip--bottom:before {
-  border-bottom-color: #458746; }
-.tooltip--success.tooltip--left:before {
-  border-left-color: #458746; }
-.tooltip--success.tooltip--right:before {
-  border-right-color: #458746; }
-.tooltip--success:after {
-  background-color: #458746; }
-
+* Tooltip variables
+*/
 /**
- * Defines the positoning logic for the tooltips.
- *
- * Classes added:
- *		1) tooltip--top
- *		2) tooltip--bottom
- *		3) tooltip--left
- *		4) tooltip--right
- */
+* Tooltip colors
+*/
 /**
- * top tooltip
- */
-.tooltip--top:before {
-  margin-bottom: -12px; }
-.tooltip--top:after {
-  margin-left: -18px; }
-.tooltip--top:before, .tooltip--top:after {
-  bottom: 100%;
-  left: 50%; }
-.tooltip--top:hover:before, .tooltip--top:hover:after, .tooltip--top:focus:before, .tooltip--top:focus:after {
-  -webkit-transform: translateY(-8px);
-  -moz-transform: translateY(-8px);
-  -ms-transform: translateY(-8px);
-  -o-transform: translateY(-8px);
-  transform: translateY(-8px); }
-
+* Mixin to generate different color style tooltips
+*/
 /**
- * bottom tooltip
- */
-.tooltip--bottom:before {
-  margin-top: -12px; }
-.tooltip--bottom:after {
-  margin-left: -18px; }
-.tooltip--bottom:before, .tooltip--bottom:after {
-  top: 100%;
-  left: 50%; }
-.tooltip--bottom:hover:before, .tooltip--bottom:hover:after, .tooltip--bottom:focus:before, .tooltip--bottom:focus:after {
-  -webkit-transform: translateY(8px);
-  -moz-transform: translateY(8px);
-  -ms-transform: translateY(8px);
-  -o-transform: translateY(8px);
-  transform: translateY(8px); }
-
-/**
- * right tooltip
- */
-.tooltip--right:before {
-  margin-left: -12px;
-  margin-bottom: -6px; }
-.tooltip--right:after {
-  margin-bottom: -14px; }
-.tooltip--right:before, .tooltip--right:after {
-  left: 100%;
-  bottom: 50%; }
-.tooltip--right:hover:before, .tooltip--right:hover:after, .tooltip--right:focus:before, .tooltip--right:focus:after {
-  -webkit-transform: translateX(8px);
-  -moz-transform: translateX(8px);
-  -ms-transform: translateX(8px);
-  -o-transform: translateX(8px);
-  transform: translateX(8px); }
-
-/**
- * left tooltip
- */
-.tooltip--left:before {
-  margin-right: -12px;
-  margin-bottom: -6px; }
-.tooltip--left:after {
-  margin-bottom: -14px; }
-.tooltip--left:before, .tooltip--left:after {
-  right: 100%;
-  bottom: 50%; }
-.tooltip--left:hover:before, .tooltip--left:hover:after, .tooltip--left:focus:before, .tooltip--left:focus:after {
-  -webkit-transform: translateX(-8px);
-  -moz-transform: translateX(-8px);
-  -ms-transform: translateX(-8px);
-  -o-transform: translateX(-8px);
-  transform: translateX(-8px); }
-
+* Mixin to set margin on tooltip using translate transform
+*/
+/* endif */
 /**
  * Sites custom UI
  */
@@ -3112,25 +2163,6 @@ table {
   content: '\e804'; }
 
 /*------------------------------------*\
-		$RESPONSIVE
-\*------------------------------------*/
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
-  .lap-nav--unstack > li {
-    display: inline-block; }
-
-  .lap-text--center {
-    text-align: center; }
-
-  .lap-float--flush {
-    font: none !important; }
-
-  .lap-display--none {
-    display: none; }
-
-  .lap-display--block {
-    display: block; } }
-/* endif */
-/*------------------------------------*\
 		$TEXTS
 \*------------------------------------*/
 .title--blue {
@@ -3162,7 +2194,7 @@ table {
  */
 .wrapper {
   position: relative;
-  max-width: 1280px;
+  max-width: 1100px;
   padding-left: 42px;
   padding-right: 42px;
   margin: 0 auto; }
@@ -3171,8 +2203,7 @@ table {
  * Main container styling
  */
 #content {
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
 /**
  * Main header styling
@@ -3193,9 +2224,25 @@ table {
   background: url(../../assets/images/landing-promo-bg.jpg) top center no-repeat;
   padding-top: 105px;
   padding-bottom: 105px; }
+  @media only screen and (max-width: 949px) {
+    .landing-promo {
+      padding-top: 63px;
+      padding-bottom: 63px; } }
 
 .landing-promo__header {
   margin-bottom: 105px; }
+  @media only screen and (max-width: 949px) {
+    .landing-promo__header {
+      margin-bottom: 63px; } }
+
+@media only screen and (max-width: 949px) {
+  .landing-promo__try {
+    text-align: center;
+    margin-top: 42px; } }
+@media only screen and (max-width: 949px) {
+  .landing-promo__try ul {
+    display: inline-block;
+    text-align: left; } }
 
 .landing-promo__button--try {
   line-height: 3.5; }
@@ -3216,16 +2263,19 @@ table {
   background: url(../../assets/images/bg--dark.png) repeat;
   padding-top: 63px;
   padding-bottom: 63px; }
+  @media only screen and (max-width: 599px) {
+    .landing-description {
+      text-align: left !important; } }
 
 .landing-features {
   padding-top: 84px;
   padding-bottom: 84px; }
 
-.landing-feature {
-  margin-bottom: 0; }
-
 .landing-feature + .landing-feature {
   margin-top: 126px; }
+  @media only screen and (max-width: 599px) {
+    .landing-feature + .landing-feature {
+      margin-top: 63px; } }
 
 .landing-feature__title:after {
   display: block;
@@ -3234,6 +2284,10 @@ table {
   height: 3px;
   background-color: #20394f;
   margin-top: 21px; }
+
+@media only screen and (max-width: 599px) {
+  .landing-feature__description {
+    padding-top: 42px; } }
 
 .landing-bottom-try {
   margin-bottom: -30px; }
@@ -3247,6 +2301,10 @@ table {
   padding-top: 63px;
   padding-bottom: 63px; }
 
+@media only screen and (max-width: 599px) {
+  .landing-pre-footer__buy {
+    margin-top: 63px; } }
+
 /**
  * Main footer styling
  */
@@ -3254,6 +2312,15 @@ table {
   background-color: #090c0f;
   padding-top: 21px;
   padding-bottom: 21px; }
+  @media only screen and (max-width: 599px) {
+    .main-footer {
+      text-align: center; } }
+
+@media only screen and (max-width: 599px) {
+  .main-social__buttons {
+    display: inlineblock;
+    float: none !important;
+    margin-top: 21px; } }
 
 /**
  * css3 animation effects
