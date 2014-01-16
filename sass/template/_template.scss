@@ -56,7 +56,15 @@ body { }
  .main-header {
  	padding-top: $half-spacing-unit;
  	padding-bottom: $half-spacing-unit;
+
+	background: url(#{$base-images-path}bg--stipped.png) top;
+
  }
+
+ 	.main-home__button {
+ 		padding-left: .5em;
+ 		padding-right: .5em;
+ 	}
 
 
 
@@ -70,6 +78,22 @@ body { }
 	padding-top: $base-spacing-unit * 5;
 	padding-bottom: $base-spacing-unit * 5;
 }
+
+	.landing-promo__header { margin-bottom: $base-spacing-unit * 5; }
+
+	.landing-promo__button--try { line-height: 3.5; }
+
+	/**
+	 * 1. Hard-coded to keep width of buttons consistent
+	 */
+
+	.landing-promo__button--buy,
+	.landing-promo__button--try {
+		width: 240px; /* [1] */
+
+		padding-right: 18px; /* [1] */
+		padding-left: 18px; /* [1] */
+	}
 
 
 .landing-description {
@@ -85,6 +109,38 @@ body { }
 	padding-bottom: $base-spacing-unit * 4;
 }
 
+	.landing-feature {
+		margin-bottom: 0;
+	}
+
+	.landing-feature + .landing-feature {
+		margin-top: $base-spacing-unit * 6;
+	}
+
+	.landing-feature__title:after {
+		display: block;
+
+		content: "";
+
+		width: $base-spacing-unit * 3;
+		height: 3px;
+
+		background-color: #20394f;
+
+		margin-top: $base-spacing-unit;
+	}
+
+
+.landing-bottom-try {
+	margin-bottom: -30px; // half of .landing-promo__button--try button hight
+}
+
+
+.landing-pre-footer_separator:after,
+.landing-pre-footer_separator:before {
+	top: -6px // to center fancy border
+}
+
 
 .landing-pre-footer {
 	background: $second-bg;
@@ -92,6 +148,7 @@ body { }
 	padding-top: $base-spacing-unit * 3;
 	padding-bottom: $base-spacing-unit * 3;
 }
+
 
 
 /**

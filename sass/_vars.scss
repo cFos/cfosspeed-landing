@@ -66,7 +66,7 @@ $base-font-color-dim:           #326b97;
 
 
 $base-link-color:               #35adda;
-$base-link-hover-color:         #8db4e2;
+$base-link-hover-color:         #fff;
 
 
 $base-heading-color:            #448bc9;
@@ -75,6 +75,10 @@ $base-heading-color-dim:        #3b76a9;
 
 $base-button-bg-color:          #7baa1b;
 $base-button-color:             #fff;
+$base-button-bg-hover-color:    #0492b6;
+
+$hollow-button-border-color:    rgba(127,186,0,.53);
+$hollow-button-bg-hover-color:  #93ca2c;
 
 
 /**
@@ -82,6 +86,10 @@ $base-button-color:             #fff;
  */
 
 $slate-blue:                    #7b9aff;
+$slate-blue-dim:                #425a8f;
+
+$dim-blue:                      #314a63;
+$dim-blue-dim:                  #192532;
 
 
 
@@ -98,15 +106,15 @@ $base-assets-path:       '../../assets/'!default;
  */
 
 $base-icon-font:         fontello;
-$base-icon-font-version: 68035387;
+$base-icon-font-version: 63612889;
 
 
 /**
  * Backgrounds
  */
 
-$base-bg:                       url(#{$base-images-path}bg.png) repeat;
-$second-bg:                     url(#{$base-images-path}bg--dark.png) repeat;
+$base-bg:                url(#{$base-images-path}bg.png) repeat;
+$second-bg:              url(#{$base-images-path}bg--dark.png) repeat;
 
 
 
@@ -114,28 +122,30 @@ $second-bg:                     url(#{$base-images-path}bg--dark.png) repeat;
 		$OPTIONS
 \*------------------------------------*/
 
-$debug-mode:        false;
+$debug-mode:              false;
 
-$global-border-box: false;
+$global-border-box:       false;
+
+$base-link-hover-unline:  false;
 
 /**
 * Elements and abstractions
 */
 
-$use-arrows:        false;
+$use-arrows:              false;
 
 /**
 * Responsive
 */
 
-$responsive:        true;
+$responsive:              true;
 
-$responsive-extra:  false;
+$responsive-extra:        false;
 
 /**
 * Responsive breakpoint's start.
 */
 
-$lap-start:         481px;
-$desk-start:        1024px;
-$desk-wide-start:   1200px;
+$lap-start:               481px;
+$desk-start:              1024px;
+$desk-wide-start:         1200px;
