@@ -97,9 +97,9 @@ $dim-blue-dim:                  #192532;
 		$ASSETS
 \*------------------------------------*/
 
-$base-assets-path:       '../../assets/'!default;
-	$base-images-path:     '#{$base-assets-path}images/'!default;
-	$base-fonts-path:      '#{$base-assets-path}fonts/'!default;
+$base-assets-path:       '../../assets/';
+	$base-images-path:     '#{$base-assets-path}images/';
+	$base-fonts-path:      '#{$base-assets-path}fonts/';
 
 /**
  * Icon-font
@@ -132,7 +132,19 @@ $base-link-hover-unline:  false;
 * Elements and abstractions
 */
 
-$use-arrows:              false;
+$use-arrows:        false;
+$use-breadcrumb:    false;
+$use-buttons:       true;
+$use-flag:          false;
+$use-forms:         false;
+$use-grid:          true;
+$use-icons:         true;
+$use-island:        false;
+$use-lists:         false;
+$use-media:         false;
+$use-nav:           true;
+$use-tables:        false;
+$use-tooltips:      false;
 
 /**
 * Responsive
@@ -140,7 +152,13 @@ $use-arrows:              false;
 
 $responsive:              true;
 
-$responsive-extra:        false;
+$responsive-palm:         true;
+$responsive-lap:          false;
+$responsive-lap-and-up:   false;
+$responsive-portable:     true;
+$responsive-desk:         false;
+
+$responsive-desk-wide:    false;
 
 /**
 * Responsive breakpoint's start.
