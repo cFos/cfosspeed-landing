@@ -1,0 +1,37 @@
+
+/*------------------------------------*\
+		$LINKS
+\*------------------------------------*/
+
+
+.title--fancy {
+	overflow: hidden;
+
+	text-align: center;
+
+	color: $dim-blue;
+
+	&:before,
+	&:after {
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+
+		content: "";
+		background: $dim-blue-dim;
+
+		width: 50%;
+		height: 1px;
+	}
+
+	&:before {
+		right: $base-spacing-unit;
+		margin-left: -50%;
+	}
+
+	&:after {
+		left: $base-spacing-unit;
+		margin-right: -50%;
+	}
+
+}
