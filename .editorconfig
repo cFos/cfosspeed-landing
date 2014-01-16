@@ -15,5 +15,11 @@ insert_final_newline = false
 [*.md]
 trim_trailing_whitespace = false
 
+[*.html]
+indent_size = 2
+
 [*.scss]
+indent_size = 2
+
+[*.js]
 indent_size = 2
