@@ -1840,22 +1840,25 @@ ul, ol, dd {
 	$FONT-SIZES
 \*------------------------------------*/
 /**
- * Button font-size modifiers.
+ * Button font-size modifiers based on headers sizes.
  */
-.btn--text--small {
-  font-size: 11.2px; }
+.btn--text--h1 {
+  font-size: 36px; }
 
-.btn--text--normal {
-  font-size: 14px; }
+.btn--text--h2 {
+  font-size: 30px; }
 
-.btn--text--med {
+.btn--text--h3 {
+  font-size: 24px; }
+
+.btn--text--h4 {
   font-size: 21px; }
 
-.btn--text--large {
-  font-size: 28px; }
+.btn--text--h5 {
+  font-size: 18px; }
 
-.btn--text--huge {
-  font-size: 42px; }
+.btn--text--h6 {
+  font-size: 16px; }
 
 /*------------------------------------*\
 	$FUNCTIONS
@@ -2221,12 +2224,17 @@ h6, .h6 {
   display: inline-block;
   /* reset line-height */
   line-height: 1;
-  vertical-align: middle;
   /* So icons added using `.icon` sit in the centre of the element */
   text-align: center;
   /* So using `.icon` on certain elements doesn't make a visual difference */
   font-style: normal;
   font-weight: normal; }
+
+.sprite {
+  vertical-align: middle; }
+
+.icon:before {
+  position: relative; }
 
 /**
  * Apply background to sprites by default
@@ -2239,11 +2247,19 @@ h6, .h6 {
  */
 @font-face {
   font-family: "fontello";
-  src: url("../../assets/fonts/fontello.eot?68035387");
-  src: url("../../assets/fonts/fontello.eot?68035387#iefix") format("embedded-opentype"), url("../../assets/fonts/fontello.woff?68035387") format("woff"), url("../../assets/fonts/fontello.ttf?68035387") format("truetype"), url("../../assets/fonts/fontello.svg?68035387#fontello") format("svg");
+  src: url("../../assets/fonts/fontello.eot?63612889");
+  src: url("../../assets/fonts/fontello.eot?63612889#iefix") format("embedded-opentype"), url("../../assets/fonts/fontello.woff?63612889") format("woff"), url("../../assets/fonts/fontello.ttf?63612889") format("truetype"), url("../../assets/fonts/fontello.svg?63612889#fontello") format("svg");
   font-weight: normal;
   font-style: normal; }
 
+/**
+ * Serving SVG font specially for Chrome to make icons smooth
+ * Temporary solution because forces Chrome to download font twice
+ */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "fontello";
+    src: url("../../assets/fonts/fontello.svg?63612889#fontello") format("svg"); } }
 .icon {
   font-family: "fontello"; }
 
@@ -2368,8 +2384,7 @@ a,
   a:hover,
   .base-link:hover,
   [data-tooltip]:hover {
-    color: #8db4e2;
-    text-decoration: none; }
+    color: white; }
 
 /**
  * Makes link looks like ordinary text
@@ -3020,12 +3035,47 @@ table {
 /*------------------------------------*\
 		$BUTTONS
 \*------------------------------------*/
-.btn:hover {
-  color: white; }
-.btn:focus, .btn:active {
-  background-color: #fff; }
-.btn .icon {
-  color: #fff; }
+.btn {
+  border: 1px solid #7baa1b; }
+  .btn:hover, .btn:focus, .btn:active {
+    color: white;
+    background-color: #0492b6;
+    border: 1px solid #0492b6; }
+
+.btn--hollow {
+  background-color: transparent;
+  border: 1px solid rgba(127, 186, 0, 0.53); }
+
+.btn--hollow--slate-blue {
+  background-color: transparent;
+  border: 1px solid #425a8f; }
+
+.btn--dim-blue {
+  color: #314a63;
+  border: 1px solid #192532;
+  background-color: #192532; }
+
+/*------------------------------------*\
+		$LINKS
+\*------------------------------------*/
+.title--fancy {
+  overflow: hidden;
+  text-align: center;
+  color: #314a63; }
+  .title--fancy:before, .title--fancy:after {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    content: "";
+    background: #192532;
+    width: 50%;
+    height: 1px; }
+  .title--fancy:before {
+    right: 21px;
+    margin-left: -50%; }
+  .title--fancy:after {
+    left: 21px;
+    margin-right: -50%; }
 
 /*------------------------------------*\
 		$ICONS and $SPRITES
@@ -3033,11 +3083,18 @@ table {
 /**
  * List of icons
  */
+.icon--cfos-logo:before {
+  content: '\e807';
+  top: -1px; }
+
 .icon--ok:before {
   content: '\e800'; }
 
 .icon--home:before {
   content: '\e803'; }
+
+.icon--angle-right:before {
+  content: '\e808'; }
 
 .icon--rub:before {
   content: '\e806'; }
@@ -3054,12 +3111,6 @@ table {
 .icon--windows:before {
   content: '\e804'; }
 
-/**
- * List of sprites
- */
-/*------------------------------------*\
-		$LINKS
-\*------------------------------------*/
 /*------------------------------------*\
 		$RESPONSIVE
 \*------------------------------------*/
@@ -3098,9 +3149,6 @@ table {
   color: #326b97; }
 
 /*------------------------------------*\
-		$WRAPPERS
-\*------------------------------------*/
-/*------------------------------------*\
 		$TEMPLATE
 \*------------------------------------*/
 /**
@@ -3131,7 +3179,12 @@ table {
  */
 .main-header {
   padding-top: 10.5px;
-  padding-bottom: 10.5px; }
+  padding-bottom: 10.5px;
+  background: url(../../assets/images/bg--stipped.png) top; }
+
+.main-home__button {
+  padding-left: .5em;
+  padding-right: .5em; }
 
 /**
  * Main content
@@ -3141,6 +3194,24 @@ table {
   padding-top: 105px;
   padding-bottom: 105px; }
 
+.landing-promo__header {
+  margin-bottom: 105px; }
+
+.landing-promo__button--try {
+  line-height: 3.5; }
+
+/**
+ * 1. Hard-coded to keep width of buttons consistent
+ */
+.landing-promo__button--buy,
+.landing-promo__button--try {
+  width: 240px;
+  /* [1] */
+  padding-right: 18px;
+  /* [1] */
+  padding-left: 18px;
+  /* [1] */ }
+
 .landing-description {
   background: url(../../assets/images/bg--dark.png) repeat;
   padding-top: 63px;
@@ -3149,6 +3220,27 @@ table {
 .landing-features {
   padding-top: 84px;
   padding-bottom: 84px; }
+
+.landing-feature {
+  margin-bottom: 0; }
+
+.landing-feature + .landing-feature {
+  margin-top: 126px; }
+
+.landing-feature__title:after {
+  display: block;
+  content: "";
+  width: 63px;
+  height: 3px;
+  background-color: #20394f;
+  margin-top: 21px; }
+
+.landing-bottom-try {
+  margin-bottom: -30px; }
+
+.landing-pre-footer_separator:after,
+.landing-pre-footer_separator:before {
+  top: -6px; }
 
 .landing-pre-footer {
   background: url(../../assets/images/bg--dark.png) repeat;
@@ -3166,7 +3258,7 @@ table {
 /**
  * css3 animation effects
  */
-.trans400, .btn:focus, .btn:active {
+.trans400, .btn {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
