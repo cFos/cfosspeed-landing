@@ -1,5 +1,5 @@
 module.exports = {
-    files: ["www/assets/css/*.css", "www/*.html"],
+    files: ["www/assets/css/*.css", "www/*.html", "www/assets/js/*.js"],
     debugInfo: true,
     host: "192.168.1.2",
     ghostMode: {
