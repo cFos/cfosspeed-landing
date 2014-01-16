@@ -145,14 +145,7 @@ body { }
 	padding-bottom: $base-spacing-unit * 4;
 }
 
-	.landing-feature {
-		margin-bottom: 0;
-
-		@include media-query (palm) {
-			float: none; // tricky way to tell JQuery that it's position should be reverted. See reverse.js
-		}
-
-	}
+	.landing-feature { }
 
 	.landing-feature + .landing-feature {
 		margin-top: $base-spacing-unit * 6;
