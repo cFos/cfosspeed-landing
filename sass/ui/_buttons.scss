@@ -5,20 +5,43 @@
 
 
 .btn {
+	@extend .trans400;
 
-	&:hover {
-		color: $base-button-color;
-	}
+	border: 1px solid #7baa1b;
 
+	&:hover,
 	&:focus,
 	&:active {
-		@extend .trans400;
 
-		background-color: #fff;
+		color: $base-button-color;
+
+		background-color: $base-button-bg-hover-color;
+
+		border: 1px solid $base-button-bg-hover-color;
 	}
 
-	.icon {
-		color: #fff;
+}
+
+
+
+.btn--hollow {
+	background-color: transparent;
+
+	border: 1px solid $hollow-button-border-color;
+}
+
+	.btn--hollow--slate-blue {
+		background-color: transparent;
+
+		border: 1px solid $slate-blue-dim;
 	}
 
+
+
+.btn--dim-blue {
+	color: $dim-blue;
+
+	border: 1px solid $dim-blue-dim;
+
+	background-color: $dim-blue-dim;
 }
