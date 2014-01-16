@@ -8,17 +8,12 @@
  * List of icons
  */
 
- .icon--ok:before        { content: '\e800'; }
- .icon--home:before      { content: '\e803'; }
- .icon--rub:before    { content: '\e806'; }
- .icon--facebook:before  { content: '\e802'; }
- .icon--twitter:before   { content: '\e801'; }
- .icon--vkontakte:before { content: '\e805'; }
- .icon--windows:before   { content: '\e804'; }
-
-
-
-/**
- * List of sprites
- */
-
+.icon--cfos-logo:before   { content: '\e807'; top: -1px; }
+.icon--ok:before          { content: '\e800'; }
+.icon--home:before        { content: '\e803'; }
+.icon--angle-right:before { content: '\e808'; }
+.icon--rub:before         { content: '\e806'; }
+.icon--facebook:before    { content: '\e802'; }
+.icon--twitter:before     { content: '\e801'; }
+.icon--vkontakte:before   { content: '\e805'; }
+.icon--windows:before     { content: '\e804'; }
