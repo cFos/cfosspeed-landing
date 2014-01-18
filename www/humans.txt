@@ -16,4 +16,4 @@ TECHNOLOGY
 
 	HTML5
 	CSS3, SASS, SASS Framework (https://github.com/ArmorDarks/sass-framework)
-	jQuery
+	jQuery, Fancybox
