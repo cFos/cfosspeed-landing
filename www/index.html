@@ -30,12 +30,12 @@
 
 	<!--[if lte IE 9]>
 		<script>
-		  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
-		    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
-		    "progress,section,time,video").split(',');
-		  for (var i = 0; i < e.length; i++) {
-		    document.createElement(e[i]);
-		  }
+			var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+				"figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+				"progress,section,time,video").split(',');
+			for (var i = 0; i < e.length; i++) {
+				document.createElement(e[i]);
+			}
 		</script>
 	<![endif]-->
 
@@ -378,7 +378,32 @@
 		ga('create','UA-XXXXX-X');ga('send','pageview');
 	</script> -->
 
-	<!-- Yandex.Metrics -->
+	<!-- Yandex.Metrika -->
+	<script type="text/javascript">
+	(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+					try {
+							w.yaCounter23671012 = new Ya.Metrika({id:23671012,
+											webvisor:true,
+											clickmap:true,
+											trackLinks:true,
+											accurateTrackBounce:true});
+					} catch(e) { }
+			});
+
+			var n = d.getElementsByTagName("script")[0],
+					s = d.createElement("script"),
+					f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+			if (w.opera == "[object Opera]") {
+					d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+	})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="//mc.yandex.ru/watch/23671012" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
 <!-- end scripts -->
 
