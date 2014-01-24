@@ -38,13 +38,13 @@
 
 
 
-<body class="page-index">
+<body itemscope itemtype="http://schema.org/Product" class="page-index">
 
 
 
 
 
-	<header class="main-header">
+	<header itemprop="brand" itemscope itemtype="http://schema.org/Brand" class="main-header">
 		<div class="wrapper">
 			<div class="grid grid--flag one-whole">
 
@@ -52,7 +52,8 @@
 
 				<div class="grid__item two-thirds">
 
-					<h1 class="main-logo h6 margin--flush">
+					<meta itemprop="logo" content="https://www.cfos.de/images/cfos.12/cfos_logo.png">
+					<h1 itemprop="name" class="main-logo h6 margin--flush">
 						<a href="http://www.cfos.de/" class="text--slate-blue unline">
 							<i class="icon icon--cfos-logo icon--left h3 align--middle"></i>
 							cFos Software
@@ -90,7 +91,7 @@
 				<div class="wrapper">
 
 					<header class="landing-promo__header align--center">
-						<h2 class="landing-promo__title text--white h-kilo">cFosSpeed 9</h2>
+						<h2 itemprop="name" class="landing-promo__title text--white h-kilo">cFosSpeed 9</h2>
 						<p class="landing-promo__subtitle text--slate-blue h5">используйте свое Интернет-подключение по полной</p>
 					</header>
 
@@ -99,7 +100,7 @@
 
 							<div class="landing-promo__img grid__item align--center one-half portable-one-whole">
 
-								<img src="assets/images/2014-winter-sale/landing-promo-image.png" alt="cFosSpeed screenshot">
+								<img itemprop="image" src="assets/images/2014-winter-sale/landing-promo-image.png" alt="cFosSpeed screenshot">
 
 							</div>
 
@@ -107,14 +108,14 @@
 
 								<ul class="nav nav--stacked">
 									<li>
-										<a href="http://www.cfos.de/beta/cfosspeed-v905-build2093.exe" class="landing-promo__button--try btn btn--text--h5 margin--half--bottom">
+										<a itemprop="url" href="http://www.cfos.de/beta/cfosspeed-v905-build2093.exe" class="landing-promo__button--try btn btn--text--h5 margin--half--bottom">
 											<i class="icon icon--windows icon--left"></i>
 											Попробовать бесплатно
 										</a>
 									</li>
-									<li>
+									<li itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 										<a href="https://www.cfos.de/ru/order/cfosspeed-n.htm" class="landing-promo__button--buy btn btn--hollow btn--text--h6">
-											Купить за <del>329</del> <strong>131</strong>
+											Купить за <del>329</del> <strong itemprop="price">131</strong>
 											<i class="icon icon--rub"></i>
 											*
 										</a>
@@ -141,7 +142,7 @@
 						<h3 class="landing-description__title h5 title--blue"><strong>cFosSpeed</strong> — высокоскоростной сетевой дравйер<br>
 						с технологией приоритизации трафика (Traffic Shaping)</h3>
 
-						<p class="landing-description__description text--dim margin--flush">Если вы устали от высокого пинга в играх, долгой загрузки страниц в браузере во время включеных торрентов, постоянно прерывающееся видео пока обновляется Steam, обрывающихся или тормозящих конферений в Skype, потому что вы решили загрузить страницу в браутере, то cFoSpeed — именно то, что вам нужно:</p>
+						<p itemprop="description" class="landing-description__description text--dim margin--flush">Если вы устали от высокого пинга в играх, долгой загрузки страниц в браузере во время включеных торрентов, постоянно прерывающееся видео пока обновляется Steam, обрывающихся или тормозящих конферений в Skype, потому что вы решили загрузить страницу в браутере, то cFoSpeed — именно то, что вам нужно:</p>
 
 					</div><!-- width limiter end -->
 				</div><!-- wrapper end -->
