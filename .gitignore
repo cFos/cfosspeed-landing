@@ -35,3 +35,7 @@ $RECYCLE.BIN/
 
 ## Sublime Text
 *.sublime*
+
+## project-specific
+curl.exe
+curl-upload.bat
