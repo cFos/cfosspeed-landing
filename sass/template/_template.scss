@@ -134,10 +134,11 @@ body { }
 
 	padding-top: $base-spacing-unit * 3;
 	padding-bottom: $base-spacing-unit * 3;
-
-	@include media-query (palm) { text-align: left!important; }
-
 }
+
+	.landing-description__title {
+		@include media-query (palm) { text-align: left!important; }
+	}
 
 
 .landing-features {
