@@ -428,55 +428,55 @@
 	<!-- Google AdWords conversion tracking -->
 	<script type="text/javascript">
 		var Goal = function(id, label, value, url) {
-		    this.id = id;
-		    this.label = label;
-		    this.value = value;
-		    this.url = url;
+				this.id = id;
+				this.label = label;
+				this.value = value;
+				this.url = url;
 		}
 
 		function trackAdWordsConversion(goal, callback) {
-		    // Create an image
-		    var img = document.createElement("img");
+				// Create an image
+				var img = document.createElement("img");
 
-		    // An optional callback function to run follow up processed after the conversion has been tracked
-		    if(callback && typeof callback === "function") {
-		        img.onload = callback;
-		    }
+				// An optional callback function to run follow up processed after the conversion has been tracked
+				if(callback && typeof callback === "function") {
+						img.onload = callback;
+				}
 
-		    // Construct the tracking beacon using the goal parameters
-		    var trackingUrl = "http://www.googleadservices.com/pagead/conversion/"+goal.id;
-		    trackingUrl += "/?random="+new Date().getMilliseconds();
-		    trackingUrl += "&value="+goal.value;
-		    trackingUrl += "&label="+goal.label;
-		    trackingUrl += "&guid=ON&script=0&url="+encodeURI(goal.url);
-		    img.src = trackingUrl;
+				// Construct the tracking beacon using the goal parameters
+				var trackingUrl = "http://www.googleadservices.com/pagead/conversion/"+goal.id;
+				trackingUrl += "/?random="+new Date().getMilliseconds();
+				trackingUrl += "&value="+goal.value;
+				trackingUrl += "&label="+goal.label;
+				trackingUrl += "&guid=ON&script=0&url="+encodeURI(goal.url);
+				img.src = trackingUrl;
 
-		    // Add the image to the page
-		    document.body.appendChild(img);
+				// Add the image to the page
+				document.body.appendChild(img);
 
-		    // Don't display the image
-		    img.style = "display: none;";
+				// Don't display the image
+				img.style = "display: none;";
 		}
 
 		function linkClick(link, goal) {
-		    try {
-		        // A function to redirect the user after the conversion event has been sent
-		        var linkClickCallback = function() {
-		            window.location = link.href;
-		        }
+				try {
+						// A function to redirect the user after the conversion event has been sent
+						var linkClickCallback = function() {
+								window.location = link.href;
+						}
 
-		        // Track the conversion
-		        trackAdWordsConversion(goal, linkClickCallback);
+						// Track the conversion
+						trackAdWordsConversion(goal, linkClickCallback);
 
-		        // Don't keep the user waiting too long in case there are problems
-		        setTimeout(linkClickCallback, 1000);
+						// Don't keep the user waiting too long in case there are problems
+						setTimeout(linkClickCallback, 1000);
 
-		        // Stop the default link click
-		        return false;
-		    } catch(err) {
-		        // Ensure the user is still redirected if there's an unexpected error in the code
-		        return true;
-		    }
+						// Stop the default link click
+						return false;
+				} catch(err) {
+						// Ensure the user is still redirected if there's an unexpected error in the code
+						return true;
+				}
 		}
 	</script>
 
