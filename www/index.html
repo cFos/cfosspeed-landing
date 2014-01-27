@@ -120,7 +120,7 @@
 								<ul class="nav nav--stacked">
 									<li>
 										<a itemprop="url"
-											 onclick="trackConv(999698296,"CUIkCOjeuggQ-N7Y3AM");"
+											 onclick="return linkClick(this, new Goal(999698296, 'CUIkCOjeuggQ-N7Y3AM', 10, location.href));"
 											 href="http://www.cfos.de/beta/cfosspeed-v905-build2093.exe"
 											 class="landing-promo__button--try btn btn--text--h5 margin--half--bottom">
 											<i class="icon icon--windows icon--left"></i>
@@ -131,7 +131,7 @@
 										<meta itemprop="category" content="Software > Computer Software > Network Software">
 										<meta itemprop="seller" content="cFos Software GmbH">
 										<meta itemprop="priceCurrency" content="RUB">
-										<a onclick="trackConv(999698296,"az5UCPDduggQ-N7Y3AM");"
+										<a onclick="return linkClick(this, new Goal(999698296, 'az5UCPDduggQ-N7Y3AM', 10, location.href));"
 											 href="https://www.cfos.de/ru/order/cfosspeed-n.htm"
 											 class="landing-promo__button--buy btn btn--hollow btn--text--h6">
 											Купить за <del>329</del> <strong itemprop="price">131</strong>
@@ -284,7 +284,7 @@
 
 			<section class="landing-bottom-try align--center">
 
-				<a onclick="trackConv(999698296,"CUIkCOjeuggQ-N7Y3AM");"
+				<a onclick="return linkClick(this, new Goal(999698296, 'CUIkCOjeuggQ-N7Y3AM', 10, location.href));"
 					 href="http://www.cfos.de/beta/cfosspeed-v905-build2093.exe"
 					 class="landing-promo__button--try btn btn--text--h5">
 					<i class="icon icon--windows icon--left"></i>
@@ -313,7 +313,7 @@
 							<p class="text--dim">cFosSpeed умеет больше, чем описано здесь.</p>
 							<p class="text--dim margin--twice--bottom">Если хотите узнать больше о приоритизации трафика и возможностях cFosSpeed, воспользуйтесь ссылкой ниже:</p>
 
-							<a onclick="trackConv(999698296,"AtszCODfuggQ-N7Y3AM");"
+							<a onclick="return linkClick(this, new Goal(999698296, 'AtszCODfuggQ-N7Y3AM', 10, location.href));"
 								 href="https://www.cfos.de/ru/cfosspeed/cfosspeed.htm"
 								 class="btn btn--hollow btn--text--h6">
 								Посетить страницу cFosSpeed
@@ -327,7 +327,7 @@
 							<h3 class="h3 title--blue">Поддержать нас</h3>
 							<p class="text--dim margin--twice--bottom">Если вам нравится cFosSpeed и вы хотите, чтобы мы продолжали работать над новыми возможностями и улучшали cFosSpeed дальше — пожалуйста, поддержите нас, купив программу:</p>
 
-							<a onclick="trackConv(999698296,"az5UCPDduggQ-N7Y3AM");"
+							<a onclick="return linkClick(this, new Goal(999698296, 'az5UCPDduggQ-N7Y3AM', 10, location.href));"
 								 href="https://www.cfos.de/ru/order/cfosspeed-n.htm"
 								 class="btn btn--hollow btn--text--h6">
 								Купить за <del>329</del> <strong>131</strong>
@@ -427,11 +427,57 @@
 
 	<!-- Google AdWords conversion tracking -->
 	<script type="text/javascript">
-		function trackConv(google_conversion_id,google_conversion_label) {
-			var image = new Image(1,1);
-			image.src = "http://www.googleadservices.com/pagead/
-		conversion/"+google_conversion_id+"/?label="+google_conversion_label
-		+"&script=0";  }
+		var Goal = function(id, label, value, url) {
+		    this.id = id;
+		    this.label = label;
+		    this.value = value;
+		    this.url = url;
+		}
+
+		function trackAdWordsConversion(goal, callback) {
+		    // Create an image
+		    var img = document.createElement("img");
+
+		    // An optional callback function to run follow up processed after the conversion has been tracked
+		    if(callback && typeof callback === "function") {
+		        img.onload = callback;
+		    }
+
+		    // Construct the tracking beacon using the goal parameters
+		    var trackingUrl = "http://www.googleadservices.com/pagead/conversion/"+goal.id;
+		    trackingUrl += "/?random="+new Date().getMilliseconds();
+		    trackingUrl += "&value="+goal.value;
+		    trackingUrl += "&label="+goal.label;
+		    trackingUrl += "&guid=ON&script=0&url="+encodeURI(goal.url);
+		    img.src = trackingUrl;
+
+		    // Add the image to the page
+		    document.body.appendChild(img);
+
+		    // Don't display the image
+		    img.style = "display: none;";
+		}
+
+		function linkClick(link, goal) {
+		    try {
+		        // A function to redirect the user after the conversion event has been sent
+		        var linkClickCallback = function() {
+		            window.location = link.href;
+		        }
+
+		        // Track the conversion
+		        trackAdWordsConversion(goal, linkClickCallback);
+
+		        // Don't keep the user waiting too long in case there are problems
+		        setTimeout(linkClickCallback, 1000);
+
+		        // Stop the default link click
+		        return false;
+		    } catch(err) {
+		        // Ensure the user is still redirected if there's an unexpected error in the code
+		        return true;
+		    }
+		}
 	</script>
 
 	<!-- Google Analytics -->
